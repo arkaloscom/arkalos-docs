@@ -3,10 +3,10 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
