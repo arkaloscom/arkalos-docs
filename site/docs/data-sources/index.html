@@ -12,22 +12,28 @@
         <meta name="author" content="Mev-Rael">
       
       
+        <link rel="canonical" href="https://arkalos.com/docs/data-sources/">
       
       
+        <link rel="prev" href="../registry/">
       
-      <link rel="icon" href="/assets/img/arkalos-logo.png">
+      
+        <link rel="next" href="../data-transformers/">
+      
+      
+      <link rel="icon" href="../../assets/img/arkalos-logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
     
     
   
-    <title>Arkalos - The Python Framework for AI & Data Artisans</title>
+    <title>Data Sources & Extractors - Arkalos - The Python Framework for AI & Data Artisans</title>
   
 
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="/assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,6 +78,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#data-sources" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -116,14 +127,14 @@
 
     <!-- Link to home -->
     <a
-      href="/."
+      href="../.."
       title="Arkalos"
       class="md-header__button md-logo"
       aria-label="Arkalos"
       data-md-component="logo"
     >
       
-  <img src="/assets/img/arkalos-logo.png" alt="logo">
+  <img src="../../assets/img/arkalos-logo.png" alt="logo">
 
     </a>
 
@@ -144,7 +155,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Data Sources & Extractors
             
           </span>
         </div>
@@ -271,9 +282,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Arkalos" class="md-nav__button md-logo" aria-label="Arkalos" data-md-component="logo">
+    <a href="../.." title="Arkalos" class="md-nav__button md-logo" aria-label="Arkalos" data-md-component="logo">
       
-  <img src="/assets/img/arkalos-logo.png" alt="logo">
+  <img src="../../assets/img/arkalos-logo.png" alt="logo">
 
     </a>
     Arkalos
@@ -300,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/legal/" class="md-nav__link">
+      <a href="../../legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -363,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/appreciations/" class="md-nav__link">
+      <a href="../../appreciations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/new-project/" class="md-nav__link">
+      <a href="../new-project/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/structure/" class="md-nav__link">
+      <a href="../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -486,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/notebooks/" class="md-nav__link">
+      <a href="../notebooks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/scripts/" class="md-nav__link">
+      <a href="../scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/app/" class="md-nav__link">
+      <a href="../app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/teamwork/" class="md-nav__link">
+      <a href="../teamwork/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/workflows/" class="md-nav__link">
+      <a href="../workflows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/utils/" class="md-nav__link">
+      <a href="../utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/logs/" class="md-nav__link">
+      <a href="../logs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/registry/" class="md-nav__link">
+      <a href="../registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,17 +742,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -756,7 +769,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Working With Data
@@ -767,10 +780,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/docs/data-sources/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -780,6 +802,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -792,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/data-transformers/" class="md-nav__link">
+      <a href="../data-transformers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/data-warehouse/" class="md-nav__link">
+      <a href="../data-warehouse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/data-analyzers/" class="md-nav__link">
+      <a href="../data-analyzers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/data-visualizers/" class="md-nav__link">
+      <a href="../data-visualizers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/ai-tasks/" class="md-nav__link">
+      <a href="../ai-tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/ai-agents/" class="md-nav__link">
+      <a href="../ai-agents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/ai-models/" class="md-nav__link">
+      <a href="../ai-models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/ai-eval/" class="md-nav__link">
+      <a href="../ai-eval/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,6 +1051,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1039,8 +1064,31 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="data-sources">Data Sources</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Coming Soon! <a href="/contact">Follow us and join the community</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1054,6 +1102,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../registry/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Registry &amp; Bootstrapping">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Registry & Bootstrapping
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../data-transformers/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Transformers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Data Transformers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1103,12 +1189,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "navigation.footer", "content.tabs.link"], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
       
-        <script src="/assets/js/extra.js"></script>
+        <script src="../../assets/js/extra.js"></script>
       
     
   </body>
