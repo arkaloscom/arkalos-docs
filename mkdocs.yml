@@ -1,0 +1,109 @@
+site_name: Arkalos
+site_url: https://arkalos.com
+repo_url: https://github.com/arkaloscom/arkalos/
+site_author: Mev-Rael
+site_description: Arkalos is an easy-to-use framework for data analysis, building data apps, warehouses, AI agents, ML, and training LLMs with elegant syntax. It just works.
+copyright: Copyright &copy; 2025 Mev-Rael
+extra:
+  site_name_extra: The Python Framework for AI & Data Artisans
+  generator: false
+  social:
+    - icon: fontawesome/brands/x-twitter 
+      link: https://x.com/mevrael
+    - icon: fontawesome/brands/github 
+      link: https://github.com/arkalos/arkalos
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/img/arkalos-logo.png
+  favicon: assets/img/arkalos-logo.png
+  font:
+    text: ui-sans-serif, system-ui, sans-serif
+    code: Source Code Pro
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: custom/dark_mode
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: custom/light_mode
+        name: Switch to light mode
+  features:
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sticky
+    # - navigation.sections
+    # - navigation.expand
+    # - toc.integrate
+    # - navigation.top
+    - content.code.copy
+    - navigation.footer
+    # - header.fixed
+    - content.tabs.link
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - github-callouts
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
+extra_css:
+  - assets/css/extra.css
+extra_javascript:
+  - assets/js/extra.js
+
+nav:
+  - Home: index.md
+  - Contact & Community: contact.md
+  - Legal & License: legal.md
+  - Appreciations: appreciations.md
+  - Getting Started:
+    - Installation: docs/installation.md
+    - New Project: docs/new-project.md
+    - Folder Structure: docs/structure.md
+    - Configuration & Env: docs/configuration.md
+  - Writing Basic Code:
+    - Your First Code & Notebook: docs/notebooks.md
+    - Scripts: docs/scripts.md
+    - App & Modules: docs/app.md
+    - Working as a Team: docs/teamwork.md
+    - Workflows: docs/workflows.md
+    - Utils: docs/utils.md
+    - Logs & Debugging: docs/logs.md
+    - Registry & Bootstrapping: docs/registry.md
+  - Working With Data:
+    - Data Sources & Extractors: docs/data-sources.md
+    - Data Transformers: docs/data-transformers.md
+    - Data Warehouse: docs/data-warehouse.md
+    - Data Analyzers: docs/data-analyzers.md
+    - Data Visualizers: docs/data-visualizers.md
+  - AI Models & Agents:
+    - AI Tasks: docs/ai-tasks.md
+    - AI Agents: docs/ai-agents.md
+    - Training a Model: docs/ai-models.md
+    - Evaluating a Model: docs/ai-eval.md

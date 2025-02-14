@@ -1,0 +1,17 @@
+[project]
+name = "arkalos-docs"
+version = "0.1.0"
+description = "Arkalos Documentation."
+readme = "README.md"
+authors = [
+    { name = "Mev-Rael" }
+]
+license= "MIT"
+license-files = ["LICEN[CS]E*"]
+requires-python = ">=3.13"
+dependencies = [
+    "markdown-callouts>=0.4.0",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.2",
+    "pymdown-extensions>=10.14.3",
+]
