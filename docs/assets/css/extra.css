@@ -70,29 +70,63 @@ li.md-nav__item--nested label {
   --md-default-fg-color: #000;
   --md-default-bg-color: #fff;
 
-  --md-code-fg-color: #000;
-  --md-code-bg-color: #ededf2;
+  /* --md-code-fg-color: #000;
+  --md-code-bg-color: #ededf2; */
+  --md-code-fg-color: #d5d5dd;
+  --md-code-bg-color: #252a37;
+  --md-default-fg-color--lightest: #d5d5dd;
+  --md-code-hl-punctuation-color: #d5d5dd;
+  --md-code-hl-operator-color: #d5d5dd;
+  --md-code-hl-keyword-color: #c392d4;
+  --md-code-hl-function-color: #79cbbf;
+  --md-code-hl-constant-color: #a2d7f6;
+  --md-code-hl-variable-color: #d5d5dd;
 
   .md-sidebar__scrollwrap {
     background-color: #f9f9f9;
   }
 
-  .highlight .c1 {
+  /* .highlight .c1 {
     color: #416b2e;
   }
 
   .highlight .s,
-  .highlight .s1 {
-    color: #b56a4c;
+  .highlight .s1,
+  .highlight .s2,
+  span.s,
+  span.s1,
+  span.s2 {
+    color: #b56a4c !important;
+  }
+
+  .highlight .kc {
+    color: var(--md-code-hl-keyword-color);
+  } */
+
+  /* .highlight .n {
+    color: #dbdba6;
+  } */
+
+  .highlight span.filename {
+    color: #abc;
+  }
+
+  .highlight .c1 {
+    color: #6a9955;
+  }
+
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2,
+  span.s,
+  span.s1,
+  span.s2 {
+    color: #ce9178 !important;
   }
 
   .highlight .kc {
     color: var(--md-code-hl-keyword-color);
   }
-
-  /* .highlight .n {
-    color: #dbdba6;
-  } */
 }
 
 /* Dark mode */
@@ -105,9 +139,20 @@ li.md-nav__item--nested label {
 
   --md-code-fg-color: #d5d5dd;
   --md-code-bg-color: #252a37;
+  --md-default-fg-color--lightest: #d5d5dd;
+  --md-code-hl-punctuation-color: #d5d5dd;
+  --md-code-hl-operator-color: #d5d5dd;
+  --md-code-hl-keyword-color: #c392d4;
+  --md-code-hl-function-color: #79cbbf;
+  --md-code-hl-constant-color: #a2d7f6;
+  --md-code-hl-variable-color: #d5d5dd;
 
   .md-sidebar__scrollwrap {
     background-color: hsla(var(--md-hue), 15%, 9%, 1);
+  }
+
+  .highlight span.filename {
+    color: #abc;
   }
 
   .highlight .c1 {
@@ -115,8 +160,12 @@ li.md-nav__item--nested label {
   }
 
   .highlight .s,
-  .highlight .s1 {
-    color: #ce9178;
+  .highlight .s1,
+  .highlight .s2,
+  span.s,
+  span.s1,
+  span.s2 {
+    color: #ce9178 !important;
   }
 
   .highlight .kc {
@@ -126,6 +175,18 @@ li.md-nav__item--nested label {
   /* .highlight .n {
     color: #dbdba6;
   } */
+}
+
+.highlight span.filename {
+  border-bottom: none;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.md-typeset code {
+  font-size: 1em;
 }
 
 /* .md-sidebar--primary, */

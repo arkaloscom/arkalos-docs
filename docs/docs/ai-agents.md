@@ -17,9 +17,13 @@ To create an agent, implement the `AIAgent` contract and define the following me
 
 - `NAME`: A unique name for the agent.
 - `DESCRIPTION`: A brief explanation of what the agent does.
-- `__init__()`: The initialization method where tasks and environment are defined.
-- `action(user_input)`: The method that processes user input and runs tasks.
+- `GREETING`: Initial greeting message from the agent to the user.
+- `ACTIONS`: List of actions an agent can take.
+- `processMessage(message)`: The method that processes user input and runs actions.
 
+
+> [!NOTE]
+> The AI Agent's `processMessage(message)` method expects a markdown-formatted string and returns a response as plain text or markdown. Using markdown enables frontend formatting for user-agent communication.
 
 
 ### Example: Simple Calculator Agent
@@ -27,31 +31,24 @@ To create an agent, implement the `AIAgent` contract and define the following me
 Create a new file: `app/ai/agents/my_agent.py`
 
 ```python
-from arkalos.ai import AIAgent, ConsoleEnv
-from app.ai.tasks.calc_task import CalcTask
+from arkalos.ai import AIAgent
+from app.ai.tasks.calc_action import CalcAction
 
 class MyAgent(AIAgent):
-    @property
-    def NAME(self):
-        return "MyAgent"
     
-    @property
-    def DESCRIPTION(self):
-        return "A calculator agent."
+    NAME = 'MyAgent'
     
-    def __init__(self):
-        self._env = ConsoleEnv(
-            self.NAME, 
-            "Hi, I am a calculator. What do you want to calculate?", 
-            self.action
-        )
-        self._tasks = {
-            "calc": CalcTask(),
-        }
+    DESCRIPTION = 'A calculator agent.'
 
-    def action(self, user_input):
-        output = self.runTask("calc", user_input)
-        self.message(output)
+    GREETING = 'Hi, I am a calculator. What do you want to calculate?'
+
+    ACTIONS = [
+        CalcAction
+    ]
+
+    def processMessage(self, message):
+        output = self.runAction(CalcAction, message)
+        return output
 ```
 
 
@@ -65,7 +62,7 @@ Create a script and run the agent:
 from app.ai.agents.my_agent import MyAgent
 
 agent = MyAgent()
-agent.run()
+agent.runConsole()
 ```
 
 Run the script:
@@ -76,67 +73,46 @@ uv run scripts/ai/my_agent.py
 
 
 
+## Multi-Action AI Agent
 
-## Defining the Environment and Tasks
+A multi-task agent can determine user intent and execute the appropriate action.
 
-In the `__init__()` method, you need to specify:
-
-- **Environment**: Defines where and how the agent operates. `ConsoleEnv` provides a basic terminal chat interface.
-- **Tasks**: The set of actions the agent can perform.
-
-For `ConsoleEnv` provide:
-
-- The agent's name.
-- A greeting message displayed at startup.
-- The `action()` method, which runs each time the user inputs a message.
-
-
-
-
-## Multi-Task AI Agent
-
-A multi-task agent can determine user intent and execute the appropriate task.
-
-Arkalos includes a `whichTask()` method that uses AI to identify the correct task from the list of registered tasks.
+Arkalos includes a `whichAction()` method that uses AI to identify the correct task from the list of registered tasks.
 
 
 
 ### Example: Multi-Task AI Agent
 
 ```python
-from arkalos.ai import AIAgent, ConsoleEnv
-from app.ai.tasks.calc_task import CalcTask
-from app.ai.tasks.what_is_my_ip_task import WhatIsMyIpTask
+from arkalos.ai import AIAgent
+from app.ai.tasks.calc_action import CalcAction
+from app.ai.tasks.what_is_my_ip_action import WhatIsMyIpAction
 
 class MultiAgent(AIAgent):
-    @property
-    def NAME(self):
-        return "MultiAgent"
     
-    @property
-    def DESCRIPTION(self):
-        return "An agent that understands user intent and selects the right task."
-    
-    def __init__(self):
-        self._env = ConsoleEnv(
-            self.NAME, 
-            "Hi, I can tell you your IP address or do math calculations.",
-            self.action
-        )
-        self._tasks = {
-            "what_is_my_ip": WhatIsMyIpTask(),
-            "calc": CalcTask(),
-        }
+    NAME = 'MultiAgent'
 
-    def action(self, user_input):
-        self.message("Determining the appropriate task...")
-        selected_task = self.whichTask(user_input)
-        self.message(f"Identified task: {selected_task}")
-        output = self.runTask(selected_task, user_input)
-        self.message(f"Task output: {output}")
+    DESCRIPTION = 'An Agent that understands the intent, determines which task to perform and runs it.'
+
+    GREETING = 'Hi, I am a MultiAgent. I can tell your IP address, do basic math calculations or transform text to SQL.'
+    
+    ACTIONS = [
+        WhatIsMyIpAction, 
+        CalcAction, 
+        TextToSQLAction
+    ]
+
+    def processMessage(self, message):
+        response = f"Determining the intent and which task to run...\n"
+        which_action = self.whichAction(message)
+        response += f"Based on your question, I determined this task: {which_action}\n"
+        response += f"Running this task...\n"
+        output = self.runAction(which_action, message)
+        response += f"Task output: {output}\n"
+        return response
 ```
 
-Here, `whichTask()` determines the right task based on user input, and `self.message()` sends output to the console.
+Here, `whichAction()` determines the right task based on user input.
 
 Now, you can create AI Agents that handle multiple tasks efficiently!
 

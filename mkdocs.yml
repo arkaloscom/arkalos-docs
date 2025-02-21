@@ -20,7 +20,7 @@ theme:
   favicon: assets/img/arkalos-logo.png
   font:
     text: ui-sans-serif, system-ui, sans-serif
-    code: Source Code Pro
+    code: Consolas, 'Courier New', monospace
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -96,14 +96,14 @@ nav:
     - Utils: docs/utils.md
     - Logs & Debugging: docs/logs.md
     - Registry & Bootstrapping: docs/registry.md
+  - AI Models & Agents:
+    - AI Actions: docs/ai-actions.md
+    - AI Agents: docs/ai-agents.md
+    - Training a Model: docs/ai-models.md
+    - Evaluating a Model: docs/ai-eval.md
   - Working With Data:
     - Data Sources & Extractors: docs/data-sources.md
     - Data Transformers: docs/data-transformers.md
     - Data Warehouse: docs/data-warehouse.md
     - Data Analyzers: docs/data-analyzers.md
     - Data Visualizers: docs/data-visualizers.md
-  - AI Models & Agents:
-    - AI Tasks: docs/ai-tasks.md
-    - AI Agents: docs/ai-agents.md
-    - Training a Model: docs/ai-models.md
-    - Evaluating a Model: docs/ai-eval.md
