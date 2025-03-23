@@ -251,6 +251,100 @@ uv run scripts/ai/agent.py
 
 
 
+## Powerful Google Extractor
+
+### Search and List Google Drive Files, Spreadsheets and Forms
+
+```python
+import polars as pl
+
+from arkalos.utils import MimeType
+from arkalos.data.extractors import GoogleExtractor
+
+google = GoogleExtractor()
+
+folder_id = 'folder_id'
+
+# List files and their metadata in a Google Drive folder
+files = google.drive.listFiles(folder_id)
+
+# Search for files with regex and by type
+files = google.drive.listFiles(folder_id, name_pattern='report', file_types=[MimeType.DOC_PDF])
+
+print(pl.DataFrame(files))
+```
+
+### List All the Spreadsheets Recursively With Their Tabs (Sheets) Info
+
+```python
+files = google.drive.listSpreadsheets(folder_id, name_pattern='report', recursive_depth=1, with_meta=True, do_print=True)
+
+for file in files:
+    google.drive.downloadFile(file['id'], do_print=True)
+```
+
+### Download, Export Files and Spreadsheets or Google Form Responses
+
+```python
+google.drive.getFormMetadata(form_id)
+
+google.drive.getFormResponses(form_id)
+
+google.drive.getFormQuestions(form_id)
+
+# Export Google Form responses as CSV
+google.drive.downloadFile(form_id)
+
+# Export Google Spreadsheet as LibreOffice Calc
+google.drive.downloadFile(spreadsheet_id, 'my_folder/spreadsheet_name', as_mime_type=MimeType.SHEET_LIBRE_CALC)
+```
+
+### Get Data from Google Analytics 4
+
+```python
+# Past 28 days (minus 2 days of delay)
+start_date = (datetime.now() - timedelta(days=29)).strftime('%Y-%m-%d')
+end_date = (datetime.now() - timedelta(days=2)).strftime('%Y-%m-%d')
+
+props = google.analytics.listProperties()
+
+property_id = 'property_id'
+
+google.analytics.fetchPages(property_id, start_date, end_date)
+
+google.analytics.fetchTrafficStats(property_id, start_date, end_date)
+
+google.analytics.fetchInternalSiteSearch(property_id, start_date, end_date)
+```
+
+### And From Google Search Console (GSC)
+
+```python
+google.analytics.listGSCSites()
+
+site = 'sc-domain:arkalos.com'
+
+google.analytics.fetchTopGSCPages(site, start_date, end_date)
+
+queries = google.analytics.fetchTopGSCQueries(site, start_date, end_date)
+
+# Sort by a built-in CTR Opportunity Score
+pl.Config(tbl_rows=100)
+pl.DataFrame(queries).select(pl.exclude('site', 'page_url', 'page_path')).sort('ctr_os', descending=True)
+
+# Fetch top pages first and then their top queries (Page-first)
+google.analytics.fetchTopGSCPagesThenQueries(site, start_date, end_date)
+
+# Query-first
+google.analytics.fetchTopGSCQueriesThenPages(site, start_date, end_date)
+
+# Or as sections, instead of a single table
+google.analytics.fetchTopGSCPagesThenQueries(site, start_date, end_date, with_sections=True)
+```
+
+
+
+
 ## Beautiful Documentation - Get Started Today
 
 Read the [Documentation](https://arkalos.com)

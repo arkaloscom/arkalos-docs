@@ -96,6 +96,8 @@ nav:
     - Utils: docs/utils.md
     - Logs & Debugging: docs/logs.md
     - Registry & Bootstrapping: docs/registry.md
+  - Data Extractors:
+    - Google Drive, GA4, GSC: docs/con-google.md
   - AI Models & Agents:
     - AI Actions: docs/ai-actions.md
     - AI Agents: docs/ai-agents.md
