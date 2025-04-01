@@ -46,7 +46,7 @@ For general utility functions, such as custom string handling, place them in `ap
 
 ## Robotics, Hardware, AVs, and More
 
-If working with robotics or hardware, start in the `app/sensors/` folder.
+If working with robotics or hardware, start in the `app/hardware/` folder.
 
 
 

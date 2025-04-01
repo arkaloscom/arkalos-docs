@@ -2,7 +2,6 @@
 
 Ensure all the [requirements](/docs/installation) are met.
 
-
 ## Starting a New Arkalos Project
 
 ```bash
@@ -25,7 +24,6 @@ Your project folder structure will be automatically set up.
 
 That's it — you're ready to start coding!
 
-
 ## Using VS Code
 
 1. Make sure you're in the project folder in the terminal.
@@ -34,17 +32,16 @@ That's it — you're ready to start coding!
 4. In the side menu, hover under Favorites and click "Save Project."
 5. Next time, easily open this project by double-clicking it in the Project Manager. To work on multiple projects, hover over the project name and click the "Open in New Window" icon on the right.
 
-
 ## Working on an Existing Project
 
 ```bash
 git pull <your project repo>
 
 uv sync
-```
 
+copy .env.example .env
+```
 
 ## Folder Structure
 
 Learn more about the Arkalos [directory structure](/docs/structure) and where to organize your files.
-

@@ -1,8 +1,18 @@
 
 # Installation
 
-> [!WARNING]
-> Arkalos has been released publicly as 0.1 (Beta 1), where the code may change or break without notice. Not all documentation and modules are complete. Use it only for experimentation, study, and practice, not for production use. [Follow us and join the community](/contact) to stay updated.
+> [!NOTE]
+> Arkalos is in Beta, where the code may change or break without notice. Not all documentation and modules are complete. Use it only for experimentation, study, and practice, not for production use. [Follow us and join the community](/contact) to stay updated.
+
+1. [Requirements](#requirements)
+2. [For Windows Users](#for-windows-users)
+3. [Git](#git)
+4. [UV Package Manager](#uv-package-manager)
+5. [Python](#python)
+6. [Installing Ollama and Open-Source AI Models](#installing-ollama-and-open-source-ai-models)
+7. [Recommended VS Code Settings and Extensions](#recommended-vs-code-settings-and-extensions)
+    1. [Install Extensions](#install-extensions)
+8. [Create a New Arkalos Project](#create-a-new-arkalos-project)
 
 
 
@@ -139,6 +149,7 @@ From the Extensions side tab, search for and install:
 * Python
 * Python Debugger
 * Pylance
+* Data Wrangler
 * Mypy Type Checker
 * isort
 * Jupyter (and extension packs)
@@ -148,6 +159,7 @@ From the Extensions side tab, search for and install:
 
 * Project Manager (by Alessandro Fragnani)
 * DotENV (by mikestead)
+* vscode-pdf (by tomoki1207)
 * SQLite Viewer (by Florian Klampfer)
 * Excel Viewer (by MESCIUS)
 * Material Icon Theme (for a nicer look) (by Philipp Kief)

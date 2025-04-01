@@ -36,7 +36,7 @@ from arkalos import config
 config('app.name')
 ```
 
-### Why use the Registry?
+## Why use the Registry?
 Using a Registry allows for flexibility. The `config()` function itself retrieves the actual configuration function from the Registry before running it. This means you can **replace** the default `config()` function with your own custom version when needed.
 
 For example, let’s say you want to override the built-in configuration system with your own:
