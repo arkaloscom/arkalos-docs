@@ -14,7 +14,7 @@ We are grateful to the communities behind these open-source projects on which we
 - Ollama
 - Jupyter Notebook
 
-**Core Python, Data & Stats:**
+**Core Python Libraries, Data & Stats:**
 
 - python-dotenv
 - numpy
@@ -22,8 +22,8 @@ We are grateful to the communities behind these open-source projects on which we
 - polars
 - datasets
 - scipy
-- requests
 - nltk
+- arrow
 
 **ML/AI & Models:**
 
@@ -41,18 +41,35 @@ We are grateful to the communities behind these open-source projects on which we
 - seaborn
 - altair
 
-**Dev, IDE, Data Generation, Testing & Types:**
+**Web, HTTP & Text Parsing:**
 
+- requests
+- lxml
+- beautifulsoup4
+- playwright
+- markdownify
+- FastAPI
+- uvicorn
+
+
+**Dev, IDE, Data Generation & Testing:**
+
+- pytest
 - ipykernel
 - mypy
 - pydantic
 - faker
-- types-requests
-- google-api-python-client-stubs
 
 **Clients & APIs:**
 
 - google-api-python-client
+
+**Typing:**
+
+- types-requests
+- google-api-python-client-stubs
+- lxml-stubs
+- types-beautifulsoup4
 
 **Documentation:**
 

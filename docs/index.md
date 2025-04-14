@@ -1,4 +1,8 @@
-
+<style>
+.md-sidebar--secondary {
+    opacity: 0 !important;
+}
+</style>
 
 # The Python Framework for AI & Data Artisans
 
@@ -72,7 +76,9 @@ uv run arkalos init
 
 * **📓 Jupyter Notebook Friendly:**<br> Start with a simple notebook and easily transition to scripts, full apps, or microservices.
 
-* **📊 Built-in Data Warehouse:**<br> Connect to Notion, Airtable, Google Drive, and more. Uses SQLite for a local, lightweight data warehouse.
+* **🕸️ Browser Automation & Structured Web Crawling & Scraping:**<br> Control a real browser to bypass auth and captchas, crawl dynamic websites, and extract structured data using simple annotations with CSS selectors, attributes, slices, and regex — no manual parsing needed.
+
+* **📊 Built-in Data Extractors & Warehouse:**<br> Connect to Notion, Airtable, Google Drive, and more. Uses SQLite for a local, lightweight data warehouse.
 
 * **🤖 AI, LLM & RAG Ready. Talk to Your Own Data:**<br> Train AI models, run LLMs, and build AI and RAG pipelines locally. Fully open-source and compliant. Built-in AI agent helps you to talk to your own data in natural language.
 
@@ -248,6 +254,60 @@ agent.runConsole()
 ```bash
 uv run scripts/ai/agent.py
 ```
+
+
+
+## Web Browser Automation, Crawling and Scraping
+
+```python
+from arkalos.browser import WebBrowser, WebBrowserTab
+
+browser = WebBrowser(WebBrowser.TYPE.REMOTE_CDP)
+
+async def search_google(tab: WebBrowserTab):
+    await tab.goto('https://www.google.com')
+    search_input = tab.get_by_role('combobox', name='Search')
+    await search_input.click()
+    await search_input.fill('cats')
+    await search_input.press('Enter')
+    images_tab = tab.get_by_role('link', name='Images', exact=True)
+    await images_tab.click()
+
+await browser.run(search_google)
+```
+
+```python
+from arkalos.data.extractors import WebExtractor, WebDetails, _
+from dataclasses import dataclass
+import polars as pl
+
+@dataclass
+class ArticleDetails(WebDetails):
+    CONTAINER = 'article[data-id]'
+
+    id: _[str, None, 'data-id']           # Attribute from container
+    url: _[str, 'a', 'href']              # Link
+    title: _[str, 'a']                    # Text from <a>
+    description: _[str, '[data-item="description"]']
+    tags: _[list[str], '[data-item="tag"]']
+    rating: _[int, '.rating', 1]          # Second child (after image)
+
+class MyWebsiteWebExtractor(WebExtractor):
+    BASE_URL = 'https://mywebsite.com'
+    PAGE_CONTENT_SELECTOR = 'main'
+    SCROLL = True
+    DETAILS = ArticleDetails
+
+    async def crawlTechArticles(self):
+        return await self.crawlSpecificDetails(['/category/tech'])
+
+mywebsite = MyWebsiteWebExtractor()
+data = await mywebsite.crawlTechArticles()
+
+df = pl.DataFrame(data)
+df
+```
+
 
 
 

@@ -11,7 +11,7 @@ extra:
     - icon: fontawesome/brands/x-twitter 
       link: https://x.com/mevrael
     - icon: fontawesome/brands/github 
-      link: https://github.com/arkalos/arkalos
+      link: https://github.com/arkaloscom/arkalos
 
 theme:
   name: material
@@ -41,7 +41,7 @@ theme:
     # - navigation.tabs.sticky
     # - navigation.sticky
     # - navigation.sections
-    # - navigation.expand
+    - navigation.expand
     # - toc.integrate
     # - navigation.top
     - content.code.copy
@@ -78,10 +78,11 @@ extra_javascript:
   - assets/js/extra.js
 
 nav:
-  - Home: index.md
-  - Contact & Community: contact.md
-  - Legal & License: legal.md
-  - Appreciations: appreciations.md
+  - Arkalos:
+    - Home: index.md
+    - Contact & Community: contact.md
+    - Legal & License: legal.md
+    - Appreciations: appreciations.md
   - Getting Started:
     - Installation: docs/installation.md
     - New Project: docs/new-project.md
@@ -97,6 +98,8 @@ nav:
     - Logs & Debugging: docs/logs.md
     - Registry & Bootstrapping: docs/registry.md
   - Data Extractors:
+    - Browser Automation: docs/browser.md
+    - Web Crawler & Scraper: docs/web-crawler.md
     - Google Drive, GA4, GSC: docs/con-google.md
   - AI Models & Agents:
     - AI Actions: docs/ai-actions.md
@@ -104,8 +107,9 @@ nav:
     - Training a Model: docs/ai-models.md
     - Evaluating a Model: docs/ai-eval.md
   - Working With Data:
-    - Data Sources & Extractors: docs/data-sources.md
-    - Data Transformers: docs/data-transformers.md
-    - Data Warehouse: docs/data-warehouse.md
     - Data Analyzers: docs/data-analyzers.md
     - Data Visualizers: docs/data-visualizers.md
+    # - Data Sources & Extractors: docs/data-sources.md
+    - Data Transformers: docs/data-transformers.md
+    - Data Warehouse: docs/data-warehouse.md
+
