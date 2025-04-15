@@ -12,17 +12,6 @@ body {
   max-width: 1600px;
 }
 
-.md-nav__title {
-  display: none;
-}
-
-.md-sidebar--primary .md-nav__list .md-nav__item {
-  font-size: 0.65rem !important;
-}
-.md-sidebar--secondary .md-nav__list .md-nav__item {
-  font-size: 0.65rem !important;
-}
-
 .md-typeset {
   font-size: 0.7rem;
 }
@@ -33,10 +22,6 @@ a.toc {
 
 .md-typeset .admonition {
   font-size: 0.7rem;
-}
-
-li nav {
-  margin-left: 0.1rem !important;
 }
 
 h1 {
@@ -66,59 +51,18 @@ p {
   border-radius: 0.3rem;
 }
 
-/* .md-nav--primary .md-nav__title {
-  background: none;
-  box-shadow: none;
-} */
-
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  border-radius: 0.3rem;
-}
-
-article.md-content__inner {
-  margin-left: 4.5rem !important;
-  margin-right: 4.5rem !important;
-}
-
-nav.md-nav > ul.md-nav__list > li:not(:first-child) > label.md-nav__link {
-  margin-top: 1.2rem;
-}
-li.md-nav__item--nested label {
-  font-weight: bold !important;
-}
-
-/* For active menu items */
-.md-nav__link--active {
-  position: relative;
-}
-
-.md-nav__link--active::before {
-  content: "";
-  position: absolute;
-  left: -14px;
-  top: 0;
-  height: 100%;
-  width: 3px;
-  background-color: #4285f4; /* Change color as needed */
-  z-index: 10;
-}
-
-.md-sidebar--secondary .md-nav__item .md-nav .md-nav__link--active::before {
-  left: -29px;
-}
-
-.md-nav,
-.md-nav__list,
-.md-nav__item {
-  overflow: visible !important; /* Override any overflow: hidden */
-}
-
-.md-sidebar--primary .md-nav__link--active::before {
-  left: -28px;
+@media screen and (min-width: 76.25em) {
+  article.md-content__inner {
+    margin-left: 4.5rem !important;
+    margin-right: 4.5rem !important;
+  }
 }
 
 /* Light mode */
 [data-md-color-scheme="default"] {
+  /* custom */
+  --app-sidebar-sec-text-color: #556;
+
   --md-default-fg-color--light: #000; /* h1, h2, etc */
   --md-default-fg-color--lighter: #c5c5cd; /* callout line, etc */
 
@@ -129,7 +73,7 @@ li.md-nav__item--nested label {
   --md-code-bg-color: #ededf2; */
   --md-code-fg-color: #d5d5dd;
   --md-code-bg-color: #252a37;
-  --md-default-fg-color--lightest: #d5d5dd;
+  /* --md-default-fg-color--lightest: #d5d5dd; */
   --md-code-hl-punctuation-color: #d5d5dd;
   --md-code-hl-operator-color: #d5d5dd;
   --md-code-hl-keyword-color: #c392d4;
@@ -137,15 +81,7 @@ li.md-nav__item--nested label {
   --md-code-hl-constant-color: #a2d7f6;
   --md-code-hl-variable-color: #d5d5dd;
 
-  .md-sidebar--primary .md-sidebar__scrollwrap {
-    background-color: #f9f9f9;
-  }
-  .md-nav--secondary {
-    border-left: 1px solid #ddd;
-  }
-  /* .md-nav--secondary .md-nav__link--active {
-    border-left: 2px red;
-  } */
+  --md-typeset-a-color: #425dff;
 
   /* .highlight .c1 {
     color: #416b2e;
@@ -191,7 +127,12 @@ li.md-nav__item--nested label {
 }
 
 /* Dark mode */
-[data-md-color-scheme="slate"] {
+
+[data-md-color-scheme="slate"],
+[data-md-color-scheme="slate"][data-md-color-primary="black"] {
+  /* custom */
+  --app-sidebar-sec-text-color: #bbc;
+
   --md-default-fg-color--light: #fff; /* h1, h2, etc */
   --md-default-fg-color--lighter: #d5d5dd; /* callout line, etc */
 
@@ -200,7 +141,7 @@ li.md-nav__item--nested label {
 
   --md-code-fg-color: #d5d5dd;
   --md-code-bg-color: #252a37;
-  --md-default-fg-color--lightest: #d5d5dd;
+  /* --md-default-fg-color--lightest: #d5d5dd; */
   --md-code-hl-punctuation-color: #d5d5dd;
   --md-code-hl-operator-color: #d5d5dd;
   --md-code-hl-keyword-color: #c392d4;
@@ -208,12 +149,7 @@ li.md-nav__item--nested label {
   --md-code-hl-constant-color: #a2d7f6;
   --md-code-hl-variable-color: #d5d5dd;
 
-  .md-sidebar--primary .md-sidebar__scrollwrap {
-    background-color: hsla(var(--md-hue), 15%, 9%, 1);
-  }
-  .md-nav--secondary {
-    border-left: 1px solid #ddd;
-  }
+  --md-typeset-a-color: #679dff;
 
   .highlight span.filename {
     color: #abc;
@@ -241,6 +177,10 @@ li.md-nav__item--nested label {
   } */
 }
 
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+
 .highlight span.filename {
   border-bottom: none;
   border-top-left-radius: 0.3rem;
@@ -252,16 +192,6 @@ li.md-nav__item--nested label {
 .md-typeset code {
   font-size: 0.7rem;
 }
-
-/* .md-sidebar--primary, */
-/* .md-sidebar--secondary {
-  opacity: 0;
-  visibility: hidden;
-} */
-
-/* .md-nav--primary {
-  padding-top: 0.5rem;
-} */
 
 .md-header--shadow {
   box-shadow: 0 0 0 #0000001a, 0 0 0.1rem #0003;
@@ -302,9 +232,10 @@ li.md-nav__item--nested label {
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
   background: transparent;
-  color: #1f6feb;
+  color: var(--md-typeset-a-color);
   margin-top: 0;
   margin-bottom: 0 !important;
+  padding-top: 0.27rem;
 }
 
 .md-typeset .admonition > *,

@@ -74,15 +74,11 @@ markdown_extensions:
 
 extra_css:
   - assets/css/extra.css
+  - assets/css/extra_sidebar.css
 extra_javascript:
   - assets/js/extra.js
 
 nav:
-  - Arkalos:
-    - Home: index.md
-    - Contact & Community: contact.md
-    - Legal & License: legal.md
-    - Appreciations: appreciations.md
   - Getting Started:
     - Installation: docs/installation.md
     - New Project: docs/new-project.md
@@ -112,4 +108,8 @@ nav:
     # - Data Sources & Extractors: docs/data-sources.md
     - Data Transformers: docs/data-transformers.md
     - Data Warehouse: docs/data-warehouse.md
-
+  - Arkalos:
+    - Home: index.md
+    - Contact & Community: contact.md
+    - Legal & License: legal.md
+    - Appreciations: appreciations.md
