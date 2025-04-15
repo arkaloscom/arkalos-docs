@@ -84,22 +84,22 @@ nav:
   - Legal & License: legal.md
   - Appreciations: appreciations.md
   - Getting Started:
-    - Installation: docs/installation.md
-    - New Project: docs/new-project.md
-    - Folder Structure: docs/structure.md
-    - Configuration & Env: docs/configuration.md
+    - Python Project Installation: docs/installation.md
+    - New Python & VS Code Project: docs/new-project.md
+    - Python Folder Structure: docs/structure.md
+    - Python Configuration & Env: docs/configuration.md
   - Writing Basic Code:
-    - Your First Code & Notebook: docs/notebooks.md
-    - Scripts: docs/scripts.md
-    - App & Modules: docs/app.md
+    - First Python Code & Notebook: docs/notebooks.md
+    - Python Scripts: docs/scripts.md
+    - Python App & Modules: docs/app.md
     - Working as a Team: docs/teamwork.md
     - Workflows: docs/workflows.md
     - Utils: docs/utils.md
-    - Logs & Debugging: docs/logs.md
+    - Python Logs & Debugging: docs/logs.md
     - Registry & Bootstrapping: docs/registry.md
   - Data Extractors:
-    - Browser Automation: docs/browser.md
-    - Web Crawler & Scraper: docs/web-crawler.md
+    - Python Browser Automation: docs/browser.md
+    - Python Crawler & Scraper: docs/web-crawler.md
     - Google Drive, GA4, GSC: docs/con-google.md
   - AI Models & Agents:
     - AI Actions: docs/ai-actions.md

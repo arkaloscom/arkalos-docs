@@ -1,4 +1,5 @@
-# App and Modules
+
+# Python App and Modules
 
 Writing app code is more than just coding — it's a **mindset**. It’s about designing code that’s easy to grow, share, reuse and maintain.
 

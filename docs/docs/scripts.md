@@ -1,4 +1,5 @@
-# Scripts
+
+# Python Scripts
 
 Scripts are simple programs that run tasks automatically. Unlike Notebooks, they don't need a UI like Jupyter and can be run from the terminal, a server, or even as an API. They're great for automating workflows, launching a microserver or an agent.
 

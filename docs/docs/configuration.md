@@ -1,5 +1,5 @@
 
-# Configuration and Environment Setup
+# Python Project Configuration and Environment Setup
 
 Arkalos uses environment variables and configuration files to manage settings across your entire app and any workflow, script or notebook.
 

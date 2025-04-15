@@ -1,5 +1,5 @@
 
-# Directory Structure and Code to Run vs Code to Reuse
+# Python Project Directory Structure
 
 Arkalos folder structure ensures that your project is well-organized, separating **code to run** from **code to reuse**, and helps you with growing your project, aligning teams, and easily manage modules, configuration, notebooks, scripts, data, and documentation.
 
@@ -83,7 +83,6 @@ This means when you share your code with the team and push it to a Git repositor
 If you're working alone, you can ignore such folders.
 
 In a team setting, use it to create preliminary versions of your code or work-in-progress files without worrying about accidentally committing them.
-
 
 
 

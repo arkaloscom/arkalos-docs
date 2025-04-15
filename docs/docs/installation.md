@@ -1,5 +1,5 @@
 
-# Installation
+# Python Project Installation
 
 > [!NOTE]
 > Arkalos is in Beta, where the code may change or break without notice. Not all documentation and modules are complete. Use it only for experimentation, study, and practice, not for production use. [Follow us and join the community](/contact) to stay updated.
@@ -119,7 +119,7 @@ ollama pull qwen2.5-coder
 ```
 
 
-## Recommended VS Code Settings and Extensions
+## Recommended VS Code Settings and Extensions for Python Data & AI Projects
 
 We suggest using VS Code as your IDE because:
 

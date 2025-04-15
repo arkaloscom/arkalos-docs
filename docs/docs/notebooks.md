@@ -1,4 +1,5 @@
-# Writing Your First Arkalos Code and Notebook
+
+# Writing Your First Python Project Code and Jupyter Notebook in the VS Code
 
 This guide focuses on using VS Code with the Jupyter extension, as [explained previously](/docs/installation/#install-extensions).
 

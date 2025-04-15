@@ -1,4 +1,5 @@
-# Creating a New Arkalos Project
+
+# How to Create a New Python Project
 
 Ensure all the [requirements](/docs/installation) are met.
 
@@ -24,7 +25,7 @@ Your project folder structure will be automatically set up.
 
 That's it — you're ready to start coding!
 
-## Using VS Code
+## Creating a Python Project (Workspace) in the VS Code
 
 1. Make sure you're in the project folder in the terminal.
 2. Run `code .` to open a new VS Code window in the current directory.
