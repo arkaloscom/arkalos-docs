@@ -1466,7 +1466,7 @@
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="step-2-create-a-webdetails-class">Step 2: Create a <code>WebDetails</code> class</h3>
-<div class="language-python highlight"><span class="filename">data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.data.extractors</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebExtractor</span><span class="p">,</span> <span class="n">WebDetails</span><span class="p">,</span> <span class="n">_</span>
+<div class="language-python highlight"><span class="filename">app/data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.data.extractors</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebExtractor</span><span class="p">,</span> <span class="n">WebDetails</span><span class="p">,</span> <span class="n">_</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
@@ -1483,7 +1483,7 @@
 </span></code></pre></div>
 <p>The <code>_</code> is a special alias for <code>Annotated</code> to provide typing and selector info in one line.</p>
 <h3 id="step-3-create-your-custom-extractor">Step 3: Create your custom extractor</h3>
-<div class="language-python highlight"><span class="filename">data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWebsiteWebExtractor</span><span class="p">(</span><span class="n">WebExtractor</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">app/data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWebsiteWebExtractor</span><span class="p">(</span><span class="n">WebExtractor</span><span class="p">):</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s1">&#39;https://mywebsite.com&#39;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">PAGE_CONTENT_SELECTOR</span> <span class="o">=</span> <span class="s1">&#39;main&#39;</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">SCROLL</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1493,11 +1493,13 @@
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">crawlSpecificDetails</span><span class="p">([</span><span class="s1">&#39;/category/tech&#39;</span><span class="p">])</span>
 </span></code></pre></div>
 <h3 id="step-4-run-your-crawler">Step 4: Run your crawler</h3>
-<div class="language-python highlight"><span class="filename">notebooks/my_web_crawler.ipynb</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">mywebsite</span> <span class="o">=</span> <span class="n">MyWebsiteWebExtractor</span><span class="p">()</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mywebsite</span><span class="o">.</span><span class="n">crawlTechArticles</span><span class="p">()</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">df</span>
+<div class="language-python highlight"><span class="filename">notebooks/my_web_crawler.ipynb</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">app.data.extractors.my_website_web_extractor</span><span class="w"> </span><span class="kn">import</span> <span class="n">MyWebsiteWebExtractor</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">mywebsite</span> <span class="o">=</span> <span class="n">MyWebsiteWebExtractor</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mywebsite</span><span class="o">.</span><span class="n">crawlTechArticles</span><span class="p">()</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">df</span>
 </span></code></pre></div>
 <p>You can view the results directly in VS Code using the <strong>Data Wrangler</strong> extension.</p>
 <h2 id="webdetails-and-annotations">🧩 WebDetails and Annotations</h2>
@@ -1588,7 +1590,7 @@
 <h2 id="scraping-json-data-from-web-pages">📦 Scraping JSON Data From Web Pages</h2>
 <p>Some websites store content as embedded JSON inside <code>&lt;script&gt;</code> tags.</p>
 <p>You can extract it using JavaScript instead of HTML selectors:</p>
-<div class="language-python highlight"><span class="filename">data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWebsiteWebExtractor</span><span class="p">(</span><span class="n">WebExtractor</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">app/data/extractors/my_website_web_extractor.py</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWebsiteWebExtractor</span><span class="p">(</span><span class="n">WebExtractor</span><span class="p">):</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s1">&#39;https://mywebsite.com&#39;</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">PAGE_CONTENT_SELECTOR</span> <span class="o">=</span> <span class="s1">&#39;main&#39;</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">JSON_DETAILS</span> <span class="o">=</span> <span class="s1">&#39;JSON.stringify(JSON.parse(document.querySelector(&quot;script#__DATA__&quot;).textContent).props.articles)&#39;</span>
@@ -1599,7 +1601,7 @@
 <p>Use <code>crawlSpecificDetailsJSON()</code> instead of <code>crawlSpecificDetails()</code> when using JSON extraction.</p>
 <h2 id="get-raw-html-or-a-parsed-html-document">🧾 Get Raw HTML or a Parsed HTML Document</h2>
 <p>Arkalos can fetch the raw HTML or a parsed document using <code>HTMLDocumentParser</code>.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">html</span> <span class="o">=</span> <span class="k">await</span> <span class="n">extractor</span><span class="o">.</span><span class="n">getPageHTML</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">notebooks/crawl.ipynb</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">html</span> <span class="o">=</span> <span class="k">await</span> <span class="n">extractor</span><span class="o">.</span><span class="n">getPageHTML</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">doc</span> <span class="o">=</span> <span class="k">await</span> <span class="n">extractor</span><span class="o">.</span><span class="n">getPageHTMLDoc</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </span></code></pre></div>
 <p>The <code>doc</code> object has many useful properties:</p>
