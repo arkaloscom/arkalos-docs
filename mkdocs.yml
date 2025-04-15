@@ -108,8 +108,8 @@ nav:
     # - Data Sources & Extractors: docs/data-sources.md
     - Data Transformers: docs/data-transformers.md
     - Data Warehouse: docs/data-warehouse.md
-  - Arkalos:
-    - Home: index.md
-    - Contact & Community: contact.md
-    - Legal & License: legal.md
-    - Appreciations: appreciations.md
+  - Home: index.md
+  - Contact & Community: contact.md
+  - Legal & License: legal.md
+  - Appreciations: appreciations.md
+  
