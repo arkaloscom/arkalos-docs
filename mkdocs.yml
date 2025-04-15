@@ -79,6 +79,10 @@ extra_javascript:
   - assets/js/extra.js
 
 nav:
+  - Home: index.md
+  - Contact & Community: contact.md
+  - Legal & License: legal.md
+  - Appreciations: appreciations.md
   - Getting Started:
     - Installation: docs/installation.md
     - New Project: docs/new-project.md
@@ -108,8 +112,3 @@ nav:
     # - Data Sources & Extractors: docs/data-sources.md
     - Data Transformers: docs/data-transformers.md
     - Data Warehouse: docs/data-warehouse.md
-  - Home: index.md
-  - Contact & Community: contact.md
-  - Legal & License: legal.md
-  - Appreciations: appreciations.md
-  
