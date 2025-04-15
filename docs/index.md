@@ -259,7 +259,7 @@ uv run scripts/ai/agent.py
 
 ## Web Browser Automation, Crawling and Scraping
 
-```python
+```python title="notebooks/browser.ipynb"
 from arkalos.browser import WebBrowser, WebBrowserTab
 
 browser = WebBrowser(WebBrowser.TYPE.REMOTE_CDP)
@@ -276,7 +276,7 @@ async def search_google(tab: WebBrowserTab):
 await browser.run(search_google)
 ```
 
-```python
+```python title="app/data/extractors/my_website_web_extractor.py"
 from arkalos.data.extractors import WebExtractor, WebDetails, _
 from dataclasses import dataclass
 import polars as pl
@@ -300,6 +300,10 @@ class MyWebsiteWebExtractor(WebExtractor):
 
     async def crawlTechArticles(self):
         return await self.crawlSpecificDetails(['/category/tech'])
+```
+
+```python title="notebooks/my_web_crawler.ipynb"
+from app.data.extractors.my_website_web_extractor import MyWebsiteWebExtractor
 
 mywebsite = MyWebsiteWebExtractor()
 data = await mywebsite.crawlTechArticles()

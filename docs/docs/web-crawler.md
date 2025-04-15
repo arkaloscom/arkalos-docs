@@ -73,7 +73,7 @@ Here’s an example website that has this HTML:
 
 ### Step 2: Create a `WebDetails` class
 
-```python title="data/extractors/my_website_web_extractor.py"
+```python title="app/data/extractors/my_website_web_extractor.py"
 from arkalos.data.extractors import WebExtractor, WebDetails, _
 from dataclasses import dataclass
 import polars as pl
@@ -96,7 +96,7 @@ The `_` is a special alias for `Annotated` to provide typing and selector info i
 
 ### Step 3: Create your custom extractor
 
-```python title="data/extractors/my_website_web_extractor.py"
+```python title="app/data/extractors/my_website_web_extractor.py"
 class MyWebsiteWebExtractor(WebExtractor):
     BASE_URL = 'https://mywebsite.com'
     PAGE_CONTENT_SELECTOR = 'main'
@@ -112,6 +112,8 @@ class MyWebsiteWebExtractor(WebExtractor):
 ### Step 4: Run your crawler
 
 ```python title="notebooks/my_web_crawler.ipynb"
+from app.data.extractors.my_website_web_extractor import MyWebsiteWebExtractor
+
 mywebsite = MyWebsiteWebExtractor()
 data = await mywebsite.crawlTechArticles()
 
@@ -230,7 +232,7 @@ Some websites store content as embedded JSON inside `<script>` tags.
 
 You can extract it using JavaScript instead of HTML selectors:
 
-```python title="data/extractors/my_website_web_extractor.py"
+```python title="app/data/extractors/my_website_web_extractor.py"
 class MyWebsiteWebExtractor(WebExtractor):
     BASE_URL = 'https://mywebsite.com'
     PAGE_CONTENT_SELECTOR = 'main'
@@ -249,7 +251,7 @@ Use `crawlSpecificDetailsJSON()` instead of `crawlSpecificDetails()` when using 
 
 Arkalos can fetch the raw HTML or a parsed document using `HTMLDocumentParser`.
 
-```python
+```python title="notebooks/crawl.ipynb"
 html = await extractor.getPageHTML(url)
 doc = await extractor.getPageHTMLDoc(url)
 ```
