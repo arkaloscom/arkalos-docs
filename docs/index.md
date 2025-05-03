@@ -37,6 +37,7 @@ No more struggling with:
 * Resolving import issues and errors
 * Figuring out how to structure custom code and modules
 * Growing from Jupyter Notebooks to full AI apps and pipelines
+* Presenting your analysis and reports, or creating modern dashboards
 * Connecting data sources and building data warehouses
 * Training AI models and running LLMs locally
 * Collaborating with teams or sharing code across devices
@@ -44,7 +45,38 @@ No more struggling with:
 The name Arkalos combines "Arc" and the Greek word "Kalos," meaning "a beautiful journey through the data."
 
 
-<img src="/assets/img/arkalos-ai-web.png" alt="Arkalos Web UI">
+
+## Modern Frontend UI and Interactive Dashboard
+
+Arkalos is a pre-configured fullstack FastAPI and React based framework. Ready to analyze data or write business applications.
+
+Simply return Altair and Polars DataFrame charts, like you do in a Jupyter Notebook, from the Python FastAPI endpoint.
+
+And frontend React will render a responsive and interactive chart automatically:
+
+<img src="/assets/img/python-react-dashboard-arkalos.png" alt="Python & React Dashboard UI - Arkalos">
+
+
+
+## AI Chat
+
+<img src="/assets/img/python-react-ai-chat-agent-arkalos.jpeg" alt="Python & React AI Chat & Agent UI - Arkalos">
+
+
+
+## JSONL Logs
+
+Powerful logging system in JSONL format with a UI:
+
+<img src="/assets/img/python-react-logs-ui-arkalos.jpeg" alt="Python & React Logs JSONL UI - Arkalos">
+
+
+
+## Deployment-Ready
+
+Arkalos comes with the pre-configured PM2, Nginx and GitHub Action scripts.
+
+Simply deploy your Python projects with `git push`.
 
 
 
@@ -61,6 +93,13 @@ Arkalos offers:
 uv init
 uv add arkalos
 uv run arkalos init
+
+cd frontend
+npm install
+npm run build
+cd ..
+
+uv run arkalos serve
 
 # That's it. Your workspace is ready to write code. It just works!
 ```
