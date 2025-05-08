@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Arkalos is an easy-to-use framework for data analysis, building data apps, warehouses, AI agents, ML, and training LLMs with elegant syntax. It just works.">
+        <meta name="description" content="How to organize and use multiple route files in Python FastAPI app.">
       
       
         <meta name="author" content="Mev-Rael">
       
       
-        <link rel="canonical" href="https://arkalos.com/docs/browser/">
+        <link rel="canonical" href="https://arkalos.com/docs/routes/">
       
       
-        <link rel="prev" href="../styles/">
+        <link rel="prev" href="../registry/">
       
       
-        <link rel="next" href="../web-crawler/">
+        <link rel="next" href="../domains/">
       
       
       <link rel="icon" href="../../assets/img/arkalos-logo.png">
@@ -26,7 +26,7 @@
     
     
   
-    <title>Python Browser Automation - Arkalos - The Python Framework for AI & Data Artisans</title>
+    <title>Multiple Route Files in Python FastAPI</title>
   
 
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-browser-automation" class="md-skip">
+        <a href="#multiple-route-files-in-python-fastapi" class="md-skip">
           Skip to content
         </a>
       
@@ -157,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Browser Automation
+              Multiple Route Files in Python FastAPI
             
           </span>
         </div>
@@ -770,19 +770,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -797,7 +797,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             HTTP Routes & Frontend
@@ -808,10 +808,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../routes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -821,6 +842,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Routes?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizing-routes-in-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizing Routes in Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-route-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Simple Route Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-to-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Data to Routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-server-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Server and Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routes with Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routes with Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-query-parameters-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Query Parameters (GET)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-path-parameters-get-404-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Path Parameters (GET) &amp; 404 Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-post-formdata-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using POST &amp; FormData Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-and-500-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling and 500 Response
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -947,19 +1084,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -974,7 +1111,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Data Extractors
@@ -985,31 +1122,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Python Browser Automation
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../browser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,104 +1135,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-windows-and-wsl-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Windows and WSL Users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting-to-and-automating-your-real-browser" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting to and Automating Your Real Browser
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting to and Automating Your Real Browser">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#launching-your-browser-in-cdp-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launching Your Browser in CDP Mode
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-webbrowser-and-running-an-action" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a WebBrowser and Running an Action
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impersonation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impersonation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-headers-user-agent-ip-and-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Headers, User Agent, IP, and Cookies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scrolling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scrolling
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1466,37 +1484,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#what-are-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      What Are Routes?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-windows-and-wsl-users" class="md-nav__link">
+  <a href="#organizing-routes-in-files" class="md-nav__link">
     <span class="md-ellipsis">
-      For Windows and WSL Users
+      Organizing Routes in Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-and-automating-your-real-browser" class="md-nav__link">
+  <a href="#a-simple-route-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Connecting to and Automating Your Real Browser
+      A Simple Route Example
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Connecting to and Automating Your Real Browser">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-to-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Data to Routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-server-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Server and Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routes with Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routes with Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launching-your-browser-in-cdp-mode" class="md-nav__link">
+  <a href="#using-query-parameters-get" class="md-nav__link">
     <span class="md-ellipsis">
-      Launching Your Browser in CDP Mode
+      Using Query Parameters (GET)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-path-parameters-get-404-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Path Parameters (GET) &amp; 404 Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-post-formdata-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using POST &amp; FormData Parameters
     </span>
   </a>
   
@@ -1508,36 +1571,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-webbrowser-and-running-an-action" class="md-nav__link">
+  <a href="#error-handling-and-500-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a WebBrowser and Running an Action
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impersonation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impersonation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-headers-user-agent-ip-and-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Headers, User Agent, IP, and Cookies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scrolling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scrolling
+      Error Handling and 500 Response
     </span>
   </a>
   
@@ -1562,153 +1598,161 @@
   
 
 
-<h1 id="python-browser-automation">Python Browser Automation</h1>
-<h2 id="configuration">Configuration</h2>
-<p>Arkalos makes it easy to automate the web using a real browser. You can use it for scraping, crawling, or saving web pages as Markdown. It’s built on top of Microsoft’s <a href="https://playwright.dev/python/">Playwright</a> engine — a modern and fast automation library that supports all major browsers.</p>
-<p>Playwright works by controlling a real browser (like Edge or Chrome), either in a headless mode (without UI) or with a visible window. It follows web standards and provides a powerful and clean API, like <code>query_selector_all()</code> to get multiple elements from the page.</p>
-<p>You can use Arkalos to:</p>
-<ul>
-<li>Automate your browser while you're logged in</li>
-<li>Interact with dynamic websites</li>
-<li>Extract specific data</li>
-<li>Scroll pages like a real user</li>
-</ul>
-<p>Before using browser features, make sure to install Playwright’s browsers and system dependencies:</p>
+<h1 id="multiple-route-files-in-python-fastapi">Multiple Route Files in Python FastAPI</h1>
+<p>Arkalos HTTP server runs on top of <strong>Uvicorn</strong> and uses an extended <strong>FastAPI</strong> app for handling HTTP routes.</p>
+<p>In an Arkalos project you may have both frontend and backend parts, or just use Arkalos for backend API as a microservice.</p>
+<p>The default frontend setup is React + Vite + React Router (RR7), located in the <code>frontend</code> folder. You can replace this with your own frontend, remve it or keep it.</p>
+<p>This guide focuses on the Python backend — specifically, how to define <strong>API routes</strong> using multiple files.</p>
+<h2 id="what-are-routes">What Are Routes?</h2>
+<p>Routes are simply URLs — like <code>/</code> or <code>/products/123</code> — that return data to your frontend or another service. Each route is linked to a Python function that handles the request and returns data.</p>
+<p>Arkalos uses a modern Three-Tier Architecture, or a familiar structure similar to MVC (Model–View–Controller). Think of routes as your "controllers" or "actions", functions you call on a server when a request arrives.</p>
+<h2 id="organizing-routes-in-files">Organizing Routes in Files</h2>
+<p>All your route files live inside <code>app/http/routes/</code> folder.</p>
+<p>Each file typically matches one feature or domain — like <code>reports.py</code>, <code>auth.py</code>, or <code>users.py</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Chrome and Edge will be installed globally and might overwrite your current browser installation. If you already have them installed, you can install only specific browsers. If you are inside WSL or server, install all of them.</p>
+<p>Arkalos automatically finds and installs all routes in this folder. No need to import or register them manually.</p>
 </div>
-<div class="language-bash highlight"><span class="filename">VS Code terminal - inside the Arkalos project</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>playwright<span class="w"> </span>install<span class="w"> </span>--with-deps
+<h2 id="a-simple-route-example">A Simple Route Example</h2>
+<p>Let's say you want to show reports about the data you analyzed. Create a new route file <code>app/http/routes/reports.py</code>:</p>
+<div class="language-python highlight"><span class="filename">app/http/routes/reports.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">router</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports&#39;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports</span><span class="p">():</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Hi from Arkalos API endpoint!&#39;</span><span class="p">}</span>
 </span></code></pre></div>
-<p>If you don’t have the Playwright Python module yet, add it to your project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>add<span class="w"> </span>playwright
+<h2 id="adding-data-to-routes">Adding Data to Routes</h2>
+<p>Let's say you want to return a dataset, like one from a Jupyter Notebook:</p>
+<div class="language-python highlight"><span class="filename">app/http/routes/reports.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">vega_datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">datasets</span> <span class="c1"># type: ignore</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">router</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports&#39;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports</span><span class="p">():</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">cars_df</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">cars</span><span class="p">()</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">cars_df</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">write_json</span><span class="p">()</span>
 </span></code></pre></div>
-<h2 id="for-windows-and-wsl-users">For Windows and WSL Users</h2>
-<p>If you're using <strong>WSL (Windows Subsystem for Linux)</strong>, Playwright may not be able to connect to your browser running in Windows. You might see timeout errors when launching a browser.</p>
-<p>To fix this, switch WSL's networking mode to <strong>mirrored</strong>, which lets your WSL environment access services running on Windows.</p>
-<p>Follow these steps:</p>
-<ol>
-<li>Create a <code>.wslconfig</code> file in your Windows user directory (e.g., <code>C:\Users\YourUsername</code>)</li>
-<li>
-<p>Add this content:
-<div class="language-ini highlight"><span class="filename">C:\Users\YourUsername\.wslconfig</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[wsl2]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">networkingMode</span><span class="o">=</span><span class="s">mirrored</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Close all running VS Code and WSL terminals.</p>
-</li>
-<li>
-<p>Restart WSL from the <strong>Windows Terminal (Admin)</strong>:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wsl<span class="w"> </span>--shutdown
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Reopen VS Code and your project inside WSL.</p>
-</li>
-<li>Verify that WSL is using the mirrored networking mode:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>wslinfo<span class="w"> </span>--wsl-version
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wslinfo<span class="w"> </span>--networking-mode
-</span></code></pre></div></li>
-</ol>
-<h2 id="connecting-to-and-automating-your-real-browser">Connecting to and Automating Your Real Browser</h2>
-<p>Sometimes, you want to automate a <strong>live browser that's already running</strong>, for example to:</p>
-<ul>
-<li>Skip login steps</li>
-<li>Avoid CAPTCHAs</li>
-<li>Access pages where you're already authenticated</li>
-</ul>
-<p>Arkalos supports this by connecting to browsers using the <strong>Chromium DevTools Protocol (CDP)</strong>—a remote debugging protocol supported by Edge and Chrome.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only Chromium-based browsers like <strong>Chrome</strong> or <strong>Edge</strong> support CDP.</p>
+<p>All backend routes must return <strong>JSON-serializable</strong> data — typically a dictionary or JSON-like structure. This makes them compatible with frontend apps and fetch calls.</p>
 </div>
-<h3 id="launching-your-browser-in-cdp-mode">Launching Your Browser in CDP Mode</h3>
-<p>To enable CDP, you need to start your browser with a special flag that opens a remote debugging port.</p>
-<p><strong>On Windows:</strong></p>
-<div class="language-bash highlight"><span class="filename">Windows Terminal (Admin)</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>start<span class="w"> </span>msedge<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+<h2 id="running-the-server-and-testing">Running the Server and Testing</h2>
+<p>Make sure your server is running:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>run<span class="w"> </span>arkalos<span class="w"> </span>serve
+</span></code></pre></div>
+<p>Then to test your API endpoints, visit your API in the browser: <code>http://127.0.0.1:8000/api/reports</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All backend routes are prefixed with <code>/api</code></p>
+</div>
+<p>You can also test using tools like Postman or your browser’s DevTools.
+If you're using Edge, check out <a href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network-console/network-console-tool">Network Console</a>.</p>
+<h2 id="routes-with-parameters">Routes with Parameters</h2>
+<p>Routes, like functions, can accept parameters from the request.</p>
+<p>There are HTTP methods, such as GET and POST. GET is the default method used to retrieve the data, and POST — to submit the form.</p>
+<p>GET has two ways of dealing with parameters:</p>
+<h3 id="using-query-parameters-get">Using Query Parameters (GET)</h3>
+<p>First. Search query parameters are commonly used on the same page to filter the data on that page.</p>
+<p>Want to filter data with URL parameters like <code>?origin=japan</code>?</p>
+<div class="language-python highlight"><span class="filename">app/http/routes/reports.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">vega_datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">datasets</span> <span class="c1"># type: ignore</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">router</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports&#39;</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">cars_df</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">cars</span><span class="p">()</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">cars_df</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">if</span> <span class="n">origin</span><span class="p">:</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;Origin&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">to_lowercase</span><span class="p">()</span> <span class="o">==</span> <span class="n">origin</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">write_json</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Visit:
+<code>http://127.0.0.1:8000/api/reports?origin=japan</code></p>
+<h3 id="using-path-parameters-get-404-response">Using Path Parameters (GET) &amp; 404 Response</h3>
+<p>Second. Paths are usually used for different pages or categories.</p>
+<p>Want the parameter inside the path itself, like <code>/reports/japan</code>?</p>
+<div class="language-python highlight"><span class="filename">app/http/routes/reports.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">vega_datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">datasets</span> <span class="c1"># type: ignore</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">router</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">response</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports/</span><span class="si">{origin}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports_by_origin</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">cars_df</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">cars</span><span class="p">()</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">cars_df</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;Origin&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">to_lowercase</span><span class="p">()</span> <span class="o">==</span> <span class="n">origin</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="k">return</span> <span class="n">response</span><span class="p">(</span><span class="s1">&#39;Category not found&#39;</span><span class="p">,</span> <span class="mi">404</span><span class="p">)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">write_json</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Visit:
+<code>http://127.0.0.1:8000/api/reports/japan</code></p>
+<p>In the case of the path, we use <code>response(data, status_code)</code> helper function to return 404 Page not Found response if the category is not found.</p>
+<h3 id="using-post-formdata-parameters">Using POST &amp; FormData Parameters</h3>
+<p>POST is used when sending data, like a form submission, such as a chat message.</p>
+<p>You define a data class to receive the form data:</p>
+<div class="language-python highlight"><span class="filename">app/http/routes/reports.py</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">Form</span><span class="p">,</span> <span class="n">Depends</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># or Chrome</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>start<span class="w"> </span>chrome<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">router</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nd">@dataclass</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">ChatRequest</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nd">@router</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/reports/chat&#39;</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports_chat</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">ChatRequest</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">()):</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;User said: &#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="c1"># Here you could trigger an AI agent or save to DB</span>
 </span></code></pre></div>
-<p><strong>On macOS:</strong></p>
-<div class="language-bash highlight"><span class="filename">Mac Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>/Applications/Microsoft<span class="se">\ </span>Edge.app/Contents/MacOS/Microsoft<span class="se">\ </span>Edge<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># or Chrome</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>/Applications/Google<span class="se">\ </span>Chrome.app/Contents/MacOS/Google<span class="se">\ </span>Chrome<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+<p>Another example:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@dataclass</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">Report</span><span class="p">:</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nd">@router</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/reports/create&#39;</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports_create</span><span class="p">(</span><span class="n">report</span><span class="p">:</span> <span class="n">Report</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">()):</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Creating report:&#39;</span><span class="p">,</span> <span class="n">report</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="c1"># Save to database or process</span>
 </span></code></pre></div>
-<h2 id="creating-a-webbrowser-and-running-an-action">Creating a WebBrowser and Running an Action</h2>
-<p>Once your browser is running in CDP mode and you're logged in, you can connect to it using Arkalos.</p>
-<p>Use the <code>WebBrowser</code> class to launch or connect to a browser. By default, it creates a headless Edge browser. To connect to your live browser, use <code>REMOTE_CDP</code> type.</p>
-<p>Available browser types are defined inside <code>WebBrowser.TYPE</code>:</p>
-<ul>
-<li><code>REMOTE_CDP</code> – Connects to a running Chrome/Edge instance</li>
-<li><code>EDGE_HEADLESS</code> (default)  </li>
-<li><code>EDGE_UI</code>  </li>
-<li><code>CHROME_HEADLESS</code>  </li>
-<li><code>CHROME_UI</code>  </li>
-<li><code>FIREFOX_HEADLESS</code>  </li>
-<li><code>FIREFOX_UI</code>  </li>
-<li><code>SAFARI_HEADLESS</code>  </li>
-<li><code>SAFARI_UI</code>  </li>
-</ul>
-<div class="language-python highlight"><span class="filename">notebooks/my_live_browser_automation.ipynb</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.browser</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebBrowser</span><span class="p">,</span> <span class="n">WebBrowserTab</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">browser</span> <span class="o">=</span> <span class="n">WebBrowser</span><span class="p">(</span><span class="n">WebBrowser</span><span class="o">.</span><span class="n">TYPE</span><span class="o">.</span><span class="n">REMOTE_CDP</span><span class="p">)</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">search_google</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">WebBrowserTab</span><span class="p">):</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">await</span> <span class="n">tab</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">)</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">search_input</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">get_by_role</span><span class="p">(</span><span class="s1">&#39;combobox&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Search&#39;</span><span class="p">)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">&#39;cats&#39;</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;Enter&#39;</span><span class="p">)</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">images_tab</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">get_by_role</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Images&#39;</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="k">await</span> <span class="n">images_tab</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">await</span> <span class="n">browser</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">search_google</span><span class="p">)</span>
+<hr />
+<h2 id="error-handling-and-500-response">Error Handling and 500 Response</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arkalos automatically catches errors and returns 500 response in a clear JSON format:</p>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports-error&#39;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports_error</span><span class="p">():</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Something went wrong&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Response:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Something went wrong&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<p>Or a code mistake:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/reports-error&#39;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reports_error</span><span class="p">():</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">a</span>  <span class="c1"># Will return the error message with NameError</span>
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Arkalos uses <strong>async/await</strong> syntax. If you're working in a Jupyter notebook, you can use <code>await</code> directly. For regular Python scripts, wrap it with <code>asyncio.run()</code>.</p>
+<p>Errors and info logs are saved in <code>data/logs/</code> folder in JSONL (JSON Lines) format.
+You can view them in the <strong>Frontend UI → Logs Page</strong>, or in your terminal during development.</p>
 </div>
-<p>This example will open your real browser and run a search on Google, just like a user would.</p>
-<p>You can pass more arguments to the <code>run()</code> callback and return data from it. The <code>tab</code> parameter gives you full control of the browser page.</p>
-<h2 id="impersonation">Impersonation</h2>
-<p>When you create a <code>WebBrowser</code>, Arkalos automatically sets:</p>
-<ul>
-<li>Correct headers</li>
-<li>User agent strings</li>
-<li>Browser behaviors</li>
-</ul>
-<p>This helps you avoid detection or errors when interacting with modern websites.</p>
-<h2 id="testing-headers-user-agent-ip-and-cookies">Testing Headers, User Agent, IP, and Cookies</h2>
-<p>To debug or inspect what your browser is sending, use this utility:</p>
-<div class="language-python highlight"><span class="filename">notebooks/browser.ipynb</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">test</span> <span class="o">=</span> <span class="k">await</span> <span class="n">WebBrowser</span><span class="p">()</span><span class="o">.</span><span class="n">testHeadersCookiesIP</span><span class="p">()</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">headers</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;headers&#39;</span><span class="p">]</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">cookies</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;cookies&#39;</span><span class="p">]</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">ip</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span>
-</span></code></pre></div>
-<p>This tells you:</p>
-<ul>
-<li>What headers are being sent</li>
-<li>The cookies stored</li>
-<li>Your current IP address</li>
-</ul>
-<p>Useful for testing VPNs, proxies, or impersonation setup.</p>
-<h2 id="scrolling">Scrolling</h2>
-<p>Many modern websites load content as you scroll. Arkalos supports smooth, human-like scrolling with <code>WebBrowser.scroll(tab)</code>.</p>
-<p>Use it inside your automation callback:</p>
-<div class="language-python highlight"><span class="filename">notebooks/browser.ipynb</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle_page</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">WebBrowserTab</span><span class="p">):</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">WebBrowser</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="o">...</span>
-</span></code></pre></div>
-<p>This helps trigger lazy-loaded content or infinite scroll.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1734,7 +1778,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../styles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Styling &amp; CSS">
+          <a href="../registry/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Registry (DI) &amp; Bootstrapping">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1744,20 +1788,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Styling & CSS
+                Registry (DI) & Bootstrapping
               </div>
             </div>
           </a>
         
         
           
-          <a href="../web-crawler/" class="md-footer__link md-footer__link--next" aria-label="Next: Python Crawler &amp; Scraper">
+          <a href="../domains/" class="md-footer__link md-footer__link--next" aria-label="Next: Domains, Models &amp; Controllers">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Python Crawler & Scraper
+                Domains, Models & Controllers
               </div>
             </div>
             <div class="md-footer__button md-icon">

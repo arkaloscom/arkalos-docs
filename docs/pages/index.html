@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Arkalos is an easy-to-use framework for data analysis, building data apps, warehouses, AI agents, ML, and training LLMs with elegant syntax. It just works.">
+        <meta name="description" content="How to use React Router 7 and Python FastAPI backend integration with uv and Arkalos.">
       
       
         <meta name="author" content="Mev-Rael">
       
       
-        <link rel="canonical" href="https://arkalos.com/docs/browser/">
+        <link rel="canonical" href="https://arkalos.com/docs/pages/">
       
       
-        <link rel="prev" href="../styles/">
+        <link rel="prev" href="../middleware/">
       
       
-        <link rel="next" href="../web-crawler/">
+        <link rel="next" href="../fetch/">
       
       
       <link rel="icon" href="../../assets/img/arkalos-logo.png">
@@ -26,7 +26,7 @@
     
     
   
-    <title>Python Browser Automation - Arkalos - The Python Framework for AI & Data Artisans</title>
+    <title>React Router Pages for Python FastAPI</title>
   
 
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-browser-automation" class="md-skip">
+        <a href="#react-router-pages-for-python-fastapi" class="md-skip">
           Skip to content
         </a>
       
@@ -157,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Browser Automation
+              React Router Pages for Python FastAPI
             
           </span>
         </div>
@@ -770,19 +770,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -797,7 +797,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             HTTP Routes & Frontend
@@ -874,10 +874,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pages/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Frontend Pages
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -887,6 +908,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a New Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a New Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-the-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create the Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-register-the-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Register the Route
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-to-the-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add to the Navigation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -947,19 +1066,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -974,7 +1093,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Data Extractors
@@ -985,31 +1104,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Python Browser Automation
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../browser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,104 +1117,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-windows-and-wsl-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Windows and WSL Users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting-to-and-automating-your-real-browser" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting to and Automating Your Real Browser
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting to and Automating Your Real Browser">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#launching-your-browser-in-cdp-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launching Your Browser in CDP Mode
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-webbrowser-and-running-an-action" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a WebBrowser and Running an Action
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impersonation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impersonation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-headers-user-agent-ip-and-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Headers, User Agent, IP, and Cookies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scrolling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scrolling
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1466,37 +1466,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-windows-and-wsl-users" class="md-nav__link">
+  <a href="#frontend-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      For Windows and WSL Users
+      Frontend Routes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-and-automating-your-real-browser" class="md-nav__link">
+  <a href="#pages" class="md-nav__link">
     <span class="md-ellipsis">
-      Connecting to and Automating Your Real Browser
+      Pages
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Connecting to and Automating Your Real Browser">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a New Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a New Page">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launching-your-browser-in-cdp-mode" class="md-nav__link">
+  <a href="#1-create-the-page-component" class="md-nav__link">
     <span class="md-ellipsis">
-      Launching Your Browser in CDP Mode
+      1. Create the Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-register-the-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Register the Route
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-to-the-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add to the Navigation
     </span>
   </a>
   
@@ -1504,42 +1540,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-webbrowser-and-running-an-action" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a WebBrowser and Running an Action
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impersonation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impersonation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-headers-user-agent-ip-and-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Headers, User Agent, IP, and Cookies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scrolling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scrolling
-    </span>
-  </a>
   
 </li>
       
@@ -1562,153 +1562,82 @@
   
 
 
-<h1 id="python-browser-automation">Python Browser Automation</h1>
-<h2 id="configuration">Configuration</h2>
-<p>Arkalos makes it easy to automate the web using a real browser. You can use it for scraping, crawling, or saving web pages as Markdown. It’s built on top of Microsoft’s <a href="https://playwright.dev/python/">Playwright</a> engine — a modern and fast automation library that supports all major browsers.</p>
-<p>Playwright works by controlling a real browser (like Edge or Chrome), either in a headless mode (without UI) or with a visible window. It follows web standards and provides a powerful and clean API, like <code>query_selector_all()</code> to get multiple elements from the page.</p>
-<p>You can use Arkalos to:</p>
-<ul>
-<li>Automate your browser while you're logged in</li>
-<li>Interact with dynamic websites</li>
-<li>Extract specific data</li>
-<li>Scroll pages like a real user</li>
-</ul>
-<p>Before using browser features, make sure to install Playwright’s browsers and system dependencies:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Chrome and Edge will be installed globally and might overwrite your current browser installation. If you already have them installed, you can install only specific browsers. If you are inside WSL or server, install all of them.</p>
-</div>
-<div class="language-bash highlight"><span class="filename">VS Code terminal - inside the Arkalos project</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>playwright<span class="w"> </span>install<span class="w"> </span>--with-deps
+<h1 id="react-router-pages-for-python-fastapi">React Router Pages for Python FastAPI</h1>
+<p>Arkalos comes with a ready-to-use frontend built with React and React Router 7, designed to work seamlessly with your FastAPI backend. This guide explains how to set up, structure, and extend your frontend pages.</p>
+<h2 id="requirements">Requirements</h2>
+<p>To use the default frontend:</p>
+<p>Make sure you have the latest version of <strong>Node.js</strong> installed.</p>
+<p>Change into the <code>frontend</code> directory and install the dependencies:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>frontend
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>install
 </span></code></pre></div>
-<p>If you don’t have the Playwright Python module yet, add it to your project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>add<span class="w"> </span>playwright
+<p>To run the development server:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
 </span></code></pre></div>
-<h2 id="for-windows-and-wsl-users">For Windows and WSL Users</h2>
-<p>If you're using <strong>WSL (Windows Subsystem for Linux)</strong>, Playwright may not be able to connect to your browser running in Windows. You might see timeout errors when launching a browser.</p>
-<p>To fix this, switch WSL's networking mode to <strong>mirrored</strong>, which lets your WSL environment access services running on Windows.</p>
-<p>Follow these steps:</p>
-<ol>
-<li>Create a <code>.wslconfig</code> file in your Windows user directory (e.g., <code>C:\Users\YourUsername</code>)</li>
-<li>
-<p>Add this content:
-<div class="language-ini highlight"><span class="filename">C:\Users\YourUsername\.wslconfig</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[wsl2]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">networkingMode</span><span class="o">=</span><span class="s">mirrored</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Close all running VS Code and WSL terminals.</p>
-</li>
-<li>
-<p>Restart WSL from the <strong>Windows Terminal (Admin)</strong>:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wsl<span class="w"> </span>--shutdown
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Reopen VS Code and your project inside WSL.</p>
-</li>
-<li>Verify that WSL is using the mirrored networking mode:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>wslinfo<span class="w"> </span>--wsl-version
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wslinfo<span class="w"> </span>--networking-mode
-</span></code></pre></div></li>
-</ol>
-<h2 id="connecting-to-and-automating-your-real-browser">Connecting to and Automating Your Real Browser</h2>
-<p>Sometimes, you want to automate a <strong>live browser that's already running</strong>, for example to:</p>
+<p>To build static files for production:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
+</span></code></pre></div>
+<h2 id="frontend-routes">Frontend Routes</h2>
+<p>Frontend routes are registered in <code>frontend/app/app_routes.jsx</code> using React Router:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;*&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">_404NotFoundPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">IndexPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">DashboardPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;/chat&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">AIChatPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;/logs&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">LogsPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span></code></pre></div>
+<p>Each route maps a URL path to a specific <strong>Page Component</strong>.</p>
+<h2 id="pages">Pages</h2>
+<p>Pages are React components stored in the <code>frontend/app/pages/</code> directory. Each page typically:</p>
 <ul>
-<li>Skip login steps</li>
-<li>Avoid CAPTCHAs</li>
-<li>Access pages where you're already authenticated</li>
+<li>Uses a layout (e.g., <code>MainLayout</code>)</li>
+<li>Sets the document <code>&lt;title&gt;</code></li>
+<li>Renders main content using standard React components</li>
+<li>Optionally fetches data from the backend using <code>fetch</code> and <code>FormData</code> APIs</li>
 </ul>
-<p>Arkalos supports this by connecting to browsers using the <strong>Chromium DevTools Protocol (CDP)</strong>—a remote debugging protocol supported by Edge and Chrome.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only Chromium-based browsers like <strong>Chrome</strong> or <strong>Edge</strong> support CDP.</p>
-</div>
-<h3 id="launching-your-browser-in-cdp-mode">Launching Your Browser in CDP Mode</h3>
-<p>To enable CDP, you need to start your browser with a special flag that opens a remote debugging port.</p>
-<p><strong>On Windows:</strong></p>
-<div class="language-bash highlight"><span class="filename">Windows Terminal (Admin)</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>start<span class="w"> </span>msedge<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+<h2 id="layouts">Layouts</h2>
+<p>Layouts are wrapper components that provide shared structure (e.g., navbar, footer). They live in <code>frontend/app/layouts/</code>.</p>
+<p>Arkalos includes a default layout:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">MainLayout</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/layouts/MainLayout&#39;</span>
+</span></code></pre></div>
+<p>You can create additional layouts here for different sections or contexts of your app.</p>
+<h2 id="creating-a-new-page">Creating a New Page</h2>
+<p>Let’s walk through adding a simple "About" page.</p>
+<h3 id="1-create-the-page-component">1. Create the Page Component</h3>
+<p>Create a new <code>frontend/app/pages/AboutPage.jsx</code> file:</p>
+<div class="language-jsx highlight"><span class="filename">frontend/app/pages/AboutPage.jsx</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">MainLayout</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/layouts/MainLayout&#39;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># or Chrome</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>start<span class="w"> </span>chrome<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">AboutPage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">MainLayout</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">&quot;About&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">About</span><span class="w"> </span><span class="nx">Page</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Hi</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="nx">my</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="err">👋</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">MainLayout</span><span class="p">&gt;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>On macOS:</strong></p>
-<div class="language-bash highlight"><span class="filename">Mac Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>/Applications/Microsoft<span class="se">\ </span>Edge.app/Contents/MacOS/Microsoft<span class="se">\ </span>Edge<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+<h3 id="2-register-the-route">2. Register the Route</h3>
+<p>In <code>frontend/app/app_routes.jsx</code>, import and add the new route:</p>
+<div class="language-jsx highlight"><span class="filename">frontend/app/app_routes.jsx</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">AboutPage</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/pages/AboutPage&#39;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># or Chrome</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>/Applications/Google<span class="se">\ </span>Chrome.app/Contents/MacOS/Google<span class="se">\ </span>Chrome<span class="w"> </span>--remote-debugging-port<span class="o">=</span><span class="m">9222</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">&quot;/about&quot;</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">AboutPage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
 </span></code></pre></div>
-<h2 id="creating-a-webbrowser-and-running-an-action">Creating a WebBrowser and Running an Action</h2>
-<p>Once your browser is running in CDP mode and you're logged in, you can connect to it using Arkalos.</p>
-<p>Use the <code>WebBrowser</code> class to launch or connect to a browser. By default, it creates a headless Edge browser. To connect to your live browser, use <code>REMOTE_CDP</code> type.</p>
-<p>Available browser types are defined inside <code>WebBrowser.TYPE</code>:</p>
-<ul>
-<li><code>REMOTE_CDP</code> – Connects to a running Chrome/Edge instance</li>
-<li><code>EDGE_HEADLESS</code> (default)  </li>
-<li><code>EDGE_UI</code>  </li>
-<li><code>CHROME_HEADLESS</code>  </li>
-<li><code>CHROME_UI</code>  </li>
-<li><code>FIREFOX_HEADLESS</code>  </li>
-<li><code>FIREFOX_UI</code>  </li>
-<li><code>SAFARI_HEADLESS</code>  </li>
-<li><code>SAFARI_UI</code>  </li>
-</ul>
-<div class="language-python highlight"><span class="filename">notebooks/my_live_browser_automation.ipynb</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.browser</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebBrowser</span><span class="p">,</span> <span class="n">WebBrowserTab</span>
+<h3 id="3-add-to-the-navigation">3. Add to the Navigation</h3>
+<p>In <code>frontend/app/components/Nav.jsx</code>:</p>
+<div class="language-jsx highlight"><span class="filename">frontend/app/components/Nav.jsx</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavLink</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">browser</span> <span class="o">=</span> <span class="n">WebBrowser</span><span class="p">(</span><span class="n">WebBrowser</span><span class="o">.</span><span class="n">TYPE</span><span class="o">.</span><span class="n">REMOTE_CDP</span><span class="p">)</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">search_google</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">WebBrowserTab</span><span class="p">):</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">await</span> <span class="n">tab</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">)</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">search_input</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">get_by_role</span><span class="p">(</span><span class="s1">&#39;combobox&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Search&#39;</span><span class="p">)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">&#39;cats&#39;</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">await</span> <span class="n">search_input</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;Enter&#39;</span><span class="p">)</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">images_tab</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">get_by_role</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Images&#39;</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="k">await</span> <span class="n">images_tab</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">await</span> <span class="n">browser</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">search_google</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/about&quot;</span><span class="p">&gt;</span><span class="nx">About</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Arkalos uses <strong>async/await</strong> syntax. If you're working in a Jupyter notebook, you can use <code>await</code> directly. For regular Python scripts, wrap it with <code>asyncio.run()</code>.</p>
-</div>
-<p>This example will open your real browser and run a search on Google, just like a user would.</p>
-<p>You can pass more arguments to the <code>run()</code> callback and return data from it. The <code>tab</code> parameter gives you full control of the browser page.</p>
-<h2 id="impersonation">Impersonation</h2>
-<p>When you create a <code>WebBrowser</code>, Arkalos automatically sets:</p>
-<ul>
-<li>Correct headers</li>
-<li>User agent strings</li>
-<li>Browser behaviors</li>
-</ul>
-<p>This helps you avoid detection or errors when interacting with modern websites.</p>
-<h2 id="testing-headers-user-agent-ip-and-cookies">Testing Headers, User Agent, IP, and Cookies</h2>
-<p>To debug or inspect what your browser is sending, use this utility:</p>
-<div class="language-python highlight"><span class="filename">notebooks/browser.ipynb</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">test</span> <span class="o">=</span> <span class="k">await</span> <span class="n">WebBrowser</span><span class="p">()</span><span class="o">.</span><span class="n">testHeadersCookiesIP</span><span class="p">()</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">headers</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;headers&#39;</span><span class="p">]</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">cookies</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;cookies&#39;</span><span class="p">]</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">ip</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span>
-</span></code></pre></div>
-<p>This tells you:</p>
-<ul>
-<li>What headers are being sent</li>
-<li>The cookies stored</li>
-<li>Your current IP address</li>
-</ul>
-<p>Useful for testing VPNs, proxies, or impersonation setup.</p>
-<h2 id="scrolling">Scrolling</h2>
-<p>Many modern websites load content as you scroll. Arkalos supports smooth, human-like scrolling with <code>WebBrowser.scroll(tab)</code>.</p>
-<p>Use it inside your automation callback:</p>
-<div class="language-python highlight"><span class="filename">notebooks/browser.ipynb</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle_page</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">WebBrowserTab</span><span class="p">):</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">WebBrowser</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="o">...</span>
-</span></code></pre></div>
-<p>This helps trigger lazy-loaded content or infinite scroll.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1734,7 +1663,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../styles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Styling &amp; CSS">
+          <a href="../middleware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Middleware">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1744,20 +1673,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Styling & CSS
+                Middleware
               </div>
             </div>
           </a>
         
         
           
-          <a href="../web-crawler/" class="md-footer__link md-footer__link--next" aria-label="Next: Python Crawler &amp; Scraper">
+          <a href="../fetch/" class="md-footer__link md-footer__link--next" aria-label="Next: Fetching API Data">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Python Crawler & Scraper
+                Fetching API Data
               </div>
             </div>
             <div class="md-footer__button md-icon">
