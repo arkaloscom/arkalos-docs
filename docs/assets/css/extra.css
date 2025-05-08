@@ -80,6 +80,7 @@ p {
   --md-code-hl-function-color: #79cbbf;
   --md-code-hl-constant-color: #a2d7f6;
   --md-code-hl-variable-color: #d5d5dd;
+  --md-code-hl-number-color: #b7cdaa;
 
   --md-typeset-a-color: #425dff;
 
@@ -121,6 +122,10 @@ p {
     color: #ce9178 !important;
   }
 
+  .highlight .sd {
+    color: #69676c;
+  }
+
   .highlight .kc {
     color: var(--md-code-hl-keyword-color);
   }
@@ -148,6 +153,7 @@ p {
   --md-code-hl-function-color: #79cbbf;
   --md-code-hl-constant-color: #a2d7f6;
   --md-code-hl-variable-color: #d5d5dd;
+  --md-code-hl-number-color: #b7cdaa;
 
   --md-typeset-a-color: #679dff;
 
@@ -166,6 +172,10 @@ p {
   span.s1,
   span.s2 {
     color: #ce9178 !important;
+  }
+
+  .highlight .sd {
+    color: #69676c;
   }
 
   .highlight .kc {

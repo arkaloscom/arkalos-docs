@@ -88,7 +88,7 @@ nav:
     - New Python & VS Code Project: docs/new-project.md
     - Python Folder Structure: docs/structure.md
     - Python Configuration & Env: docs/configuration.md
-    # - Deploy Python Scripts & App: docs/deployment.md
+    - Deploy Python Scripts & App: docs/deployment.md
   - Writing Basic Code:
     - First Python Code & Notebook: docs/notebooks.md
     - Python Scripts: docs/scripts.md
@@ -97,7 +97,14 @@ nav:
     - Workflows: docs/workflows.md
     - Utils: docs/utils.md
     - Python Logs & Debugging: docs/logs.md
-    - Registry & Bootstrapping: docs/registry.md
+    - Registry (DI) & Bootstrapping: docs/registry.md
+  - HTTP Routes & Frontend:
+    - Routes: docs/routes.md
+    - Domains, Models & Controllers: docs/domains.md
+    - Middleware: docs/middleware.md
+    - Frontend Pages: docs/pages.md
+    - Fetching API Data: docs/fetch.md
+    - Styling & CSS: docs/styles.md
   - Data Extractors:
     - Python Browser Automation: docs/browser.md
     - Python Crawler & Scraper: docs/web-crawler.md

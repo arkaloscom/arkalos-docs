@@ -29,7 +29,7 @@ li nav {
 
 @media screen and (min-width: 76.25em) {
   nav.md-nav > ul.md-nav__list > li:not(:first-child) > label.md-nav__link {
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
   }
 }
 
