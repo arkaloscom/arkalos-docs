@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Arkalos is an easy-to-use framework for data analysis, building data apps, warehouses, AI agents, ML, and training LLMs with elegant syntax. It just works.">
+        <meta name="description" content="How to perform hierarchical bottom-up and K-Means clustering using the ClusterAnalyzer class in Python. How to visualize clusters, dendrogram, elbow plots, correlation heatmaps, feature importance bar charts using Altair.">
       
       
         <meta name="author" content="Mev-Rael">
@@ -26,7 +26,7 @@
     
     
   
-    <title>Data Analyzers - Arkalos - The Python Framework for AI & Data Artisans</title>
+    <title>Data Analysis (ClusterAnalyzer class) and Altair charts in Python</title>
   
 
     
@@ -157,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data Analyzers
+              Data Analysis (ClusterAnalyzer class) and Altair charts in Python
             
           </span>
         </div>
@@ -1241,6 +1241,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Analyzers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1251,6 +1263,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clusteranalyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterAnalyzer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-segmenting-a-marketing-campaign-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Segmenting a Marketing Campaign Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-load-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Step 1: Load the Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-preprocess-and-clean-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧹 Step 2: Preprocess and Clean the Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-correlation-heatmap-with-altair" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Step 3: Correlation Heatmap with Altair
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-hierarchical-clustering-and-dendrogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌿 Step 4: Hierarchical Clustering and Dendrogram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-elbow-plot-k-means-diagnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Step 5: Elbow Plot (K-Means Diagnostic)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-perform-hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Step 6: Perform Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-cluster-bar-chart-grid-feature-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Step 7: Cluster Bar Chart Grid (Feature Importance)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Step 8: Summary Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      K-Means Clustering
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1350,6 +1480,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clusteranalyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterAnalyzer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-segmenting-a-marketing-campaign-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Segmenting a Marketing Campaign Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-load-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Step 1: Load the Dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-preprocess-and-clean-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧹 Step 2: Preprocess and Clean the Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-correlation-heatmap-with-altair" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Step 3: Correlation Heatmap with Altair
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-hierarchical-clustering-and-dendrogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌿 Step 4: Hierarchical Clustering and Dendrogram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-elbow-plot-k-means-diagnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Step 5: Elbow Plot (K-Means Diagnostic)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-perform-hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Step 6: Perform Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-cluster-bar-chart-grid-feature-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Step 7: Cluster Bar Chart Grid (Feature Importance)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Step 8: Summary Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      K-Means Clustering
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1368,16 +1605,102 @@
 
 
 <h1 id="data-analyzers">Data Analyzers</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Coming Soon! <a href="/contact">Follow us and join the community</a></p>
-</div>
+<p>Arkalos provides a flexible API for analyzing structured datasets. Its analyzers help uncover patterns, segment data, and visualize important trends using powerful visualizations built with <strong>Altair</strong> and <strong>Vega</strong> specifications.</p>
+<p>Currently available analyzers:</p>
+<ul>
+<li><code>ClusterAnalyzer</code> – for clustering, pattern recognition, and feature importance insights</li>
+</ul>
+<h2 id="clusteranalyzer">ClusterAnalyzer</h2>
+<p>Clustering is an unsupervised learning method used to group similar data points together based on their characteristics. It’s useful in many fields such as marketing segmentation, customer behavior analysis, anomaly detection, and recommendation systems.</p>
+<p>In Arkalos, <code>ClusterAnalyzer</code> simplifies the process of clustering and visualizing your data.</p>
+<h2 id="example-segmenting-a-marketing-campaign-dataset">Example: Segmenting a Marketing Campaign Dataset</h2>
+<p>Let’s walk through a step-by-step analysis of customer behavior using a marketing campaign dataset.</p>
+<h2 id="step-1-load-the-dataset">📥 Step 1: Load the Dataset</h2>
+<p>Download the <a href="https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis">marketing_campaign.csv</a> dataset from Kaggle and save it under <code>data/drive</code> or your notebook's working directory.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 1)</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive_path</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.data.analyzers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClusterAnalyzer</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">arkalos.data.transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataTransformer</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">drive_path</span><span class="p">(</span><span class="s1">&#39;marketing_campaign.csv&#39;</span><span class="p">),</span> <span class="n">separator</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="step-2-preprocess-and-clean-the-data">🧹 Step 2: Preprocess and Clean the Data</h2>
+<p>Before clustering, clean and prepare the dataset using <code>DataTransformer</code>.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 2)</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dtf</span> <span class="o">=</span> <span class="p">(</span><span class="n">DataTransformer</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="o">.</span><span class="n">renameColsSnakeCase</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="o">.</span><span class="n">dropRowsByID</span><span class="p">(</span><span class="mi">9432</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="o">.</span><span class="n">dropCols</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;dt_customer&#39;</span><span class="p">])</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="o">.</span><span class="n">dropRowsDuplicate</span><span class="p">()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="o">.</span><span class="n">dropRowsNullsAndNaNs</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="o">.</span><span class="n">dropColsSameValueNoVariance</span><span class="p">()</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="o">.</span><span class="n">splitColsOneHotEncode</span><span class="p">([</span><span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;marital_status&#39;</span><span class="p">])</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">cln_df</span> <span class="o">=</span> <span class="n">dtf</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># Get cleaned Polars DataFrame</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Dataset shape: </span><span class="si">{</span><span class="n">cln_df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">cln_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="step-3-correlation-heatmap-with-altair">📊 Step 3: Correlation Heatmap with Altair</h2>
+<p>Visualize relationships between numerical features using a correlation heatmap.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 3)</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ca</span> <span class="o">=</span> <span class="n">ClusterAnalyzer</span><span class="p">(</span><span class="n">cln_df</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">ca</span><span class="o">.</span><span class="n">createCorrHeatmap</span><span class="p">()</span>
+</span></code></pre></div>
+<p><img src="/assets/img/altair_correlation_heatmap_python_arkalos.svg" alt="Altair Vega correlation heatmap in Python, Arkalos"></p>
+<p>This heatmap helps identify redundant or highly correlated features to consider removing or combining before clustering.</p>
+<h2 id="step-4-hierarchical-clustering-and-dendrogram">🌿 Step 4: Hierarchical Clustering and Dendrogram</h2>
+<p>To estimate the optimal number of clusters, start with <strong>Agglomerative Hierarchical Clustering</strong> and plot the <strong>dendrogram</strong>.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 4)</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">ca</span><span class="o">.</span><span class="n">findNClustersViaDendrogram</span><span class="p">()</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Optimal clusters (dendrogram): </span><span class="si">{</span><span class="n">n_clusters</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">ca</span><span class="o">.</span><span class="n">createDendrogram</span><span class="p">()</span>
+</span></code></pre></div>
+<p><img src="/assets/img/altair_dendrogram_python_arkalos.svg" alt="Altair Vega dendrogram in Python, Arkalos"></p>
+<p>The dendrogram shows how clusters are merged and suggests an optimal cluster count where vertical lines (distance) are largest.</p>
+<h2 id="step-5-elbow-plot-k-means-diagnostic">📈 Step 5: Elbow Plot (K-Means Diagnostic)</h2>
+<p>Another common technique to estimate the number of clusters is the <strong>elbow method</strong>, which plots total within-cluster variance.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 5)</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">ca</span><span class="o">.</span><span class="n">findNClustersViaElbow</span><span class="p">()</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Optimal clusters (elbow): </span><span class="si">{</span><span class="n">n_clusters</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">ca</span><span class="o">.</span><span class="n">createElbowPlot</span><span class="p">()</span>
+</span></code></pre></div>
+<p><img src="/assets/img/altair_elbow_plot_python_arkalos.svg" alt="Altair Vega elbow plot in Python, Arkalos"></p>
+<p>The “elbow” point marks the optimal cluster count where adding more clusters yields diminishing returns.</p>
+<h2 id="step-6-perform-hierarchical-clustering">🧬 Step 6: Perform Hierarchical Clustering</h2>
+<p>Use the selected number of clusters to perform <strong>bottom-up agglomerative clustering</strong>:</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 6)</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">ca</span><span class="o">.</span><span class="n">clusterHierarchicalBottomUp</span><span class="p">(</span><span class="n">n_clusters</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="step-7-cluster-bar-chart-grid-feature-importance">📊 Step 7: Cluster Bar Chart Grid (Feature Importance)</h2>
+<p>After clustering, visualize which features differentiate each cluster using an interactive <strong>bar chart grid</strong>, sorted by Gini importance:</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 7)</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ca</span><span class="o">.</span><span class="n">createClusterBarChart</span><span class="p">()</span>
+</span></code></pre></div>
+<p><img src="/assets/img/altair_hierarchical_cluster_bar_chart_grid_python_arkalos.svg" alt="Altair Vega hierarchical cluster bar chart in grid layout in Python, Arkalos"></p>
+<p>Each subplot corresponds to a feature; bars represent average values per cluster.</p>
+<h2 id="step-8-summary-report">📋 Step 8: Summary Report</h2>
+<p>Print a human-readable summary showing the most informative features for each cluster.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 8)</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ca</span><span class="o">.</span><span class="n">printSummary</span><span class="p">()</span>
+</span></code></pre></div>
+<p><img src="/assets/img/cluster_summary_report_per_cluster_breakdown_python_arkalos.png" alt="Clustering summary report per cluster breakdown in Python, Arkalos"></p>
+<p>Each cluster's profile includes min, max, average, and standard deviation for each feature.</p>
+<h2 id="k-means-clustering">K-Means Clustering</h2>
+<p>Compare hierarchical clustering with <strong>K-Means</strong>, a partition-based method often faster for large datasets.</p>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 9)</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ca_kmeans</span> <span class="o">=</span> <span class="n">ClusterAnalyzer</span><span class="p">(</span><span class="n">cln_df</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">ca_kmeans</span><span class="o">.</span><span class="n">clusterKMeans</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">ca_kmeans</span><span class="o">.</span><span class="n">createClusterBarChart</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">notebooks/clustering.ipynb (cell 10)</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ca_kmeans</span><span class="o">.</span><span class="n">printSummary</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Notice how different clustering methods may yield different insights depending on the dataset's structure.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
