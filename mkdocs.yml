@@ -98,6 +98,7 @@ nav:
     - Utils: docs/utils.md
     - Python Logs & Debugging: docs/logs.md
     - Registry (DI) & Bootstrapping: docs/registry.md
+    - DB & Warehouse Migrations: docs/migrations.md
   - HTTP Routes & Frontend:
     - Routes: docs/routes.md
     - Domains, Models & Controllers: docs/domains.md

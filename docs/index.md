@@ -167,6 +167,30 @@ ca.createDendrogram()
 
 
 
+## Database & Data Warehouse Migrations
+
+```python
+class Migration(DatabaseMigration):
+    
+    def up(self):
+
+        with DB().createTable('users') as table:
+            table.col('id').id()
+            table.col('name').string(64).notNull()
+            table.col('email').string().notNull()
+            table.col('is_admin').boolean().notNull().default('FALSE')
+            table.col('created_at').datetime().notNull().defaultNow()
+            table.col('updated_at').datetime().notNull().defaultNow()
+            table.indexUnique('email')
+
+
+
+    def down(self):
+        DB().dropTable('users')
+```
+
+
+
 ## Free Built-In Data Warehouse and Integrations
 
 Data warehouses are centralized repositories that connect multiple data sources to enable AI and analytics.
