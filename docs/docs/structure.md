@@ -23,6 +23,7 @@ app/
         types/              # Custom data types (data contracts)
         visualizers/        # Data visualization, charts, graphs and plots
         warehouse/          # Data warehouse setup and loaders
+    domains/                # Business domains, boundaries, data mesh, Domain-Driven Design (DDD)
     hadrware/               # Interfaces for hardware and robotics
         actuators/          # Drivers/interfaces to control physical actuators (e.g; motors, arms)
         communicators/      # Protocols and data exchange between hardware components (e.g; Ethernet)
@@ -33,6 +34,8 @@ app/
         middleware/         # HTTP web middleware logic to run between requests
         routes/             # HTTP web routes to expose the app externally via web URLs
     jobs/                   # Background tasks, queues, and cron jobs
+    schema/                 # Query builder, Database and Data Warehouse schemas and migrations
+        migrations/         # Schema versions and migrations
     services/               # Services and systems, e.g. API connectors
     utils/                  # Utility functions and helpers
     workflows/              # Multi-step workflows (e.g., data pipelines, automation)
